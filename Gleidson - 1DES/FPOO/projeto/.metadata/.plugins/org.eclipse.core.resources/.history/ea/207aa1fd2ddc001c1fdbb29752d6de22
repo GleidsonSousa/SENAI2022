@@ -1,0 +1,85 @@
+package modeloPaciente;
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+public class Pacientes {
+
+	private int id;
+	
+	private String orgao;
+	
+	private String nome;
+	
+	private Date dataentrada;
+	
+	private String medico;
+	
+	private final  Locale BRASIL = new Locale("pt", "BR");
+	
+	private SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy");
+	
+	
+	
+	
+	
+	
+	// Contrutor só com Id
+	public Pacientes(int id) {
+		this.id = id;
+		
+		
+	}
+
+
+	//contrutor  geral
+	
+	public Pacientes(int id, String orgao, String nome, String dataentrada, String medico
+			) {
+		
+		this.id = id;
+		this.orgao = orgao;
+		this.nome = nome;
+		try {
+			this.dataentrada = sdf.parse(dataentrada);
+		} catch (ParseException e) {
+			System.out.println(e);
+		}
+		this.medico = medico;
+		
+	}
+	
+	//construtor para ler dados separados por ";"
+	public Pacientes(String linha) {
+		this.id = Integer.parseInt(linha.split(";")[0]);
+		this.orgao = linha.split(";")[1];
+		this.nome = linha.split(";")[2];
+		
+		//para não dar bug na hora de ler a data e converter ela para string.
+		try {
+			
+			this.dataentrada = sdf.parse(linha.split(";")[3]);
+		} catch (ParseException e) {
+			System.out.println(e);
+		}
+		
+		this.medico = linha.split(";")[4];
+		
+	}
+
+	//string para exibir na tela!! ( é para isso que serve o toString em geral >:c )
+	public String toString() {
+		return null;
+	}
+	
+	
+//contrutor para enviar os dados para a planilha:
+
+	public String toCSV() {
+		return null;
+		}		
+
+}

@@ -1,0 +1,170 @@
+package modeloPaciente;
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Objects;
+
+public class Pacientes {
+
+	private int id;
+	
+	private String orgao;
+	
+	private String nomePac;
+	
+	private Date dataentrada;
+	
+	private String medico;
+	
+	private final  Locale BRASIL = new Locale("pt", "BR");
+	
+	private SimpleDateFormat sdf = new SimpleDateFormat ("dd/MM/yyyy");
+	
+	
+	
+	
+	
+	
+	// Construtor só com Id
+	public Pacientes(int id) {
+		this.id = id;
+		
+		
+	}
+
+
+	//construtor  geral
+	
+	public Pacientes(int id, String orgao, String nomePac, String dataentrada, String medico
+			) {
+		
+		this.id = id;
+		this.orgao = orgao;
+		this.nomePac = nomePac;
+		try {
+			this.dataentrada = sdf.parse(dataentrada);
+		} catch (ParseException e) {
+			System.out.println(e);
+		}
+		this.medico = medico;
+		
+	}
+	
+	//construtor para ler dados separados por ";"
+	public Pacientes(String linha) {
+		this.id = Integer.parseInt(linha.split(";")[0]);
+		this.orgao = linha.split(";")[1];
+		this.nomePac = linha.split(";")[2];
+		
+		//para não dar bug na hora de ler a data e converter ela para string.
+		try {
+			
+			this.dataentrada = sdf.parse(linha.split(";")[3]);
+		} catch (ParseException e) {
+			System.out.println(e);
+		}
+		
+		this.medico = linha.split(";")[4];
+		
+	}
+
+	//gets && sets
+	
+	public int getId() {
+		return id;
+	}
+
+	public String getId(String s) {
+		return String.format("%d", id);
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getOrgao() {
+		return orgao;
+	}
+
+	public void Orgao(String orgao) {
+		this.orgao = orgao;
+	}
+
+	public String getNome() {
+		return nomePac;
+	}
+
+	public void setNome(String nomePac) {
+		this.nomePac = nomePac;
+	}
+	
+	public Date getDataEntrada() {
+		return dataentrada;
+	}
+
+	//get para converter data em string.
+	public String getNascimento(String s) {
+		return sdf.format(dataentrada);
+	}
+
+	public void setDataEntrada(Date dataentrada) {
+		this.dataentrada = dataentrada;
+	}
+
+	public String getNomeMedico() {
+		return medico;
+	}
+
+	public void setNomeMedico(String medico) {
+		this.medico = medico;
+	}
+	@SuppressWarnings("deprecation")
+	public int obterAnoDeEspera() {
+		return new Date().getYear() - dataentrada.getYear();
+	}
+
+	// Define o "id" como campo Chave
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	// Define o "id" como campo Chave
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pacientes other = (Pacientes) obj;
+		return id == other.id;
+	}
+
+	
+	
+	
+	
+	//construtor para exibir na tela!! ( é para isso que serve o toString em geral >:c )
+	public String toString() {
+		return id + "\t" + orgao + "\t" + nomePac + "\t" + sdf.format(dataentrada) + "\t" + medico + "\t"
+				+ obterAnoDeEspera() + "\n";
+	}
+	
+	
+//construtor para enviar os dados para a planilha:
+
+	public String toCSV() {
+		return id + ";" + orgao + ";" + nomePac + ";" + sdf.format(dataentrada) + ";" + medico + ";" +"\r\n";
+		}		
+	//construtor para preencher tabela / igual o toString .
+	public String[] toVetor() {
+		return new String[] { String.format("%d", id),orgao, 
+				sdf.format(dataentrada), medico + obterAnoDeEspera() };
+	}
+
+}
+

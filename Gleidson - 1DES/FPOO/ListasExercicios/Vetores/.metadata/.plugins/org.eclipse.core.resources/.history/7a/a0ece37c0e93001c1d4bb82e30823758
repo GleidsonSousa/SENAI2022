@@ -1,0 +1,52 @@
+package exemploclassicos;
+
+import java.util.Random;
+
+public class Acumula {
+public static Random rand;
+	public static void main(String[] args) {
+		System.out.println("O algoritimo de acumulção simples");
+		System.out.println("simples,retornou=");
+		System.out.println(simples(10));
+		System.out.println("Total = "+ Aleatorio(0));
+	}
+
+	
+	public static int simples(int interacoes) {
+		int x =0;
+		for (int i = 0; i <interacoes; i++);
+		x+=i;
+		return x;
+
+		
+}
+	public static int Aleatorio(int interacoes) {
+		rand = new Random();
+		int x =0;
+		for (int i = 0; i <interacoes; i++);
+		int r = rand.nextInt[100];
+		System.out.println("Aleatorio = "+ r);
+		x=i;
+		System.out.println("Acumulado"+x);
+		
+		
+		return x;
+	}
+	public static int Fatorial(int numero) {
+		int fato ;
+		System.out.println("Digite um  valor");
+		for ()
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		return interacoes;
+		
+	}
+	
+}

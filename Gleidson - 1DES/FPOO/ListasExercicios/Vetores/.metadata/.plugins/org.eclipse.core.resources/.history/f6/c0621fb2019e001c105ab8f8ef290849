@@ -1,0 +1,31 @@
+package tarefa;
+
+import java.util.Scanner;
+
+public class exercicios {
+
+	public static void main(String[] args) {
+             int opc;
+             Scanner menu;
+            
+     
+             menu = new Scanner(System.in);
+     		
+             System.out.println("         menu");
+             System.out.println(" Cadstrar um aluno:");
+             System.out.println(" Buscar aluno por nota:");
+             System.out.println(" Média do aluno:");
+             System.out.println(" Sair");
+    		
+        		
+        	  
+        	  
+          
+         
+		
+  
+
+
+}
+
+}

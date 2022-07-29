@@ -1,0 +1,30 @@
+body{
+    background-size: cover;
+    background-image: url("../img01/imgfundo.jpg");
+}
+
+div .nada{
+    padding: 450px;
+}
+
+div.barra{
+    padding: 1em;
+    background-color: #203540;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra img{
+    padding: 0.5em;
+}
+
+.a{
+    height: 210px;
+    width: 550px;
+    display: flex;
+    opacity: 30%;
+    flex-direction: column;
+}
+
+
+

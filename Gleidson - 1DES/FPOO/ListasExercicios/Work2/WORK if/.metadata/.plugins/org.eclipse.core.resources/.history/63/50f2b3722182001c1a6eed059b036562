@@ -1,0 +1,35 @@
+package modelo;
+
+import java.util.Scanner;
+
+public class Media {
+ public static Scanner entrada;
+	public static void main(String[] args) {
+		entrada = new Scanner (System.in);
+		int idade,anodeNascimento;
+		System.out.printf("digite sua idade\n");
+		 anodeNascimento = entrada.nextInt();
+		 idade = 2022- anodeNascimento;
+		
+		
+		
+	
+		System.out.println("maior de idade"+ idade);
+		System.out.println("menor de idade "+ idade);
+		
+		if (idade>= 18){	
+		
+		
+			
+		}else{
+			
+			
+
+		}
+		
+		
+		
+		
+	}
+}
+

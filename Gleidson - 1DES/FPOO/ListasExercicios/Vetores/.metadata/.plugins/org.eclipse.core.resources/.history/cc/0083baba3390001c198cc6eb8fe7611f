@@ -1,0 +1,40 @@
+package provajava;
+import java.util.Scanner;
+public class prova {
+		public static Scanner scan = new Scanner (System.in);
+		public static void main(String[] args) {
+			int menu = 0;
+			while (menu != 5){
+				System.out.println("1- Horas Extras \n2-  Apuração \n3- Matérias Primas\n4- Blocos\n5- Sair");
+			menu = scan.nextInt();
+			switch (menu){
+			case 1:	scan = new Scanner (System.in);
+			String nome,sobrenome;
+			 int horas,HEX;
+			double P,PE,salario1,salario2,total;
+			 System.out.println("Digite seu nome e sobrenome");
+			nome = scan.next();
+			sobrenome = scan.next();
+			 System.out.println("Digite suas horas trabalhadas");
+			 horas = scan.nextInt();
+			 System.out.println("Digite suas horas extras");
+			 HEX= scan.nextInt();
+			 P =  5.625;
+			 PE = (P* 0.75)+P;
+			 salario1 = horas*P;
+			 salario2 = HEX* PE;
+			 total = salario1+salario2;
+			 System.out.println("Funcionario:"+nome+"\nSobrenome:"+sobrenome);
+			 System.out.println("seu salario sem horas extras:"+"\nR$"+salario1);
+			 System.out.println("Valor a receber pelas horas extras"+"\nR$"+salario2);
+			 System.out.println("O valor toral do seu salario é:" +"\nR$"+total);
+				
+				break;
+			case 3: 
+				break;
+			case 4: 
+				break;
+			case 5: System.out.println("Bye,Bye.");
+			break;
+			default : System.out.println("está opção é invalida"); 	 
+		}}}}

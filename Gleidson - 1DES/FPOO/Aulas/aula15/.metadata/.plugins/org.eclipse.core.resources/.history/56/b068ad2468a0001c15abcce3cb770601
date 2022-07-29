@@ -1,0 +1,47 @@
+package exercicios;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ex_2 {
+
+	public static Scanner scan =  new Scanner (System.in);
+	public static void main(String[] args) throws IOException{
+		int [] numbers = new int [10];
+		System.out.println("Digite 10 números inteiros.");
+		numbers [0]=  scan.nextInt();
+		numbers [1]=  scan.nextInt();
+		numbers [2]=  scan.nextInt();
+		numbers [3]=  scan.nextInt();
+		numbers [4]=  scan.nextInt();
+		numbers [5]=  scan.nextInt();
+		numbers [6]=  scan.nextInt();
+		numbers [7]=  scan.nextInt();
+		numbers [8]=  scan.nextInt();
+		numbers [9]=  scan.nextInt();
+		int contador = 0;
+		System.out.println("Números na Ordem Normal:");
+		 for(contador = 0; contador <= 10; contador++){
+		     System.out.println(contador);
+		     
+		 }
+		int [] inverso	 = new int [10];
+		inverso [0]=  numbers [9];
+		inverso [1]=  numbers [8];
+		inverso [2]=  numbers [7];
+		inverso [3]=  numbers [6];
+		inverso [4]=  numbers [5];
+		inverso [5]=  numbers [4];
+		inverso [6]=  numbers [3];
+		inverso [7]=  numbers [2];
+		inverso [8]=  numbers [1];
+		inverso [9]=  numbers [0]; 
+	 int contador1 = 0;
+		System.out.println("Números na Ordem inversa:");
+		 for(contador1 = 0; contador1 <= 10; contador1++){
+		     System.out.println(contador1);
+		     
+		 	}
+		 }
+	}
+

@@ -1,0 +1,17 @@
+body {
+	 background-image: url ('../img/ sucos.png');
+	 background-repeat: no-repeat;
+	 background-size: cover;
+}		
+label{
+	  color: #FFFFFF;
+	  font-size: 40px;
+}
+	  
+.class{
+	font-weigth: bolder;
+}
+			
+#id{
+	 font-size: 50px;
+}	 

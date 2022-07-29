@@ -1,0 +1,109 @@
+
+ 
+body{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    padding-top: 5%;
+     
+}
+
+
+.principal{
+
+    display:grid;
+    grid-template-rows: repeat(3,25vh);
+    grid-template-columns: 20vw 20vw 20vw ;
+    grid-template-areas: "casa1 casa2 casa3" "casa4 casa5 casa6" "casa7 casa8 casa9" 
+
+}
+.casa1{
+
+    height: 100%;
+    grid-area: casa1;
+   border-bottom: 4px solid black;
+   font-size: 150px;
+   color: rgb(19, 245, 19);
+    align-items:center;
+   padding-left: 3px;
+
+}
+.casa2{
+
+    height: 100%;
+    grid-area: casa2;
+    border-left: 2px solid black;
+    border-bottom: 4px solid black;
+    font-size: 150px;
+    color: rgb(19, 245, 19);
+
+}
+.casa3{
+    height: 100%;
+    grid-area: casa3;
+    border-left: 2px solid black;
+    border-bottom: 4px solid black;
+    font-size: 150px;
+    color: rgba(255, 11, 11, 0.89);
+
+
+}
+.casa4{
+
+    height: 100%;
+    grid-area: casa4;
+    border-bottom: 4px solid black;
+    font-size: 150px;
+    color: rgba(255, 11, 11, 0.89);
+    
+}
+
+ .casa5{
+
+    height: 100%;
+    grid-area: casa5;
+    border-left: 2px solid black;
+    border-bottom: 4px solid black;
+    font-size: 150px;
+    color: rgba(255, 11, 11, 0.89);
+ }
+
+ .casa6{
+
+    height: 100%;
+    grid-area: casa6;
+    border-left: 2px solid black;
+    border-bottom: 4px solid black;
+    font-size: 150px;
+    color: rgb(19, 245, 19);
+
+ }
+
+ .casa7{
+
+    height: 100%;
+    grid-area: casa7;
+    font-size: 150px;
+    color: rgba(255, 11, 11, 0.89);
+    
+    
+ }
+
+ .casa8{
+
+    height: 100%;
+    grid-area: casa8;
+   border-left: 2px solid black;
+   font-size: 150px;
+   color: rgb(19, 245, 19);
+
+ }
+
+ .casa9{
+
+    height: 100%;
+    grid-area: casa9;
+    border-left: 2px solid black;
+    font-size: 150px;
+    color: rgba(255, 11, 11, 0.89);
+ }

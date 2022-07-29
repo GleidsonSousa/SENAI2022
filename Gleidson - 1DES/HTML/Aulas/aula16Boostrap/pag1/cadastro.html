@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../assets/file_271364.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styleCad.css">
+    <title>Game Genshin Impact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body >
+  <div class="main">
+    <form class="row g-3 needs-validation was-validated" novalidate>
+        <div class="col-md-2">
+            <label for="Nick" class="form-label">NickName</label>
+            <input type="text" class="form-control" id="Nick" placeholder="exemple: Jurubeba" required>
+            <div class="invalid-feedback">
+             
+          </div>
+          <div class="valid-feedback">
+             Proximo !
+          </div>
+          </div>
+        <div class="col-md-2">
+          <label for="Email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="Email" placeholder="exemple@gmail.com" required>
+          <div class="invalid-feedback">
+           
+        </div>
+        <div class="valid-feedback">
+           Proximo !
+        </div>
+        </div>
+        <div class="col-md-2">
+          <label for="senha" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="senha"  placeholder="Digite uma senha" required>
+          <div class="invalid-feedback">
+            
+        </div>
+         </div>
+        
+        <div class="valid-feedback">
+           Proximo !
+        </div>
+        <div class="col-4">
+          <label for="Endereço" class="form-label">Endereço Completo</label>
+          <input type="text" class="form-control" id="Endereço" placeholder="exemplo:Rua tal numero 000 Bairro arroz" required>
+          <div class="invalid-feedback">
+           
+        </div>
+        <div class="valid-feedback">
+           Proximo !
+        </div>
+        </div>
+        <div class="col-4">
+          <label for="complemento" class="form-label">Complemento</label>
+          <input type="text" class="form-control" id="complemento" placeholder="Casa, Apartamento, etc..." required>
+          <div class="invalid-feedback">
+           
+        </div>
+        <div class="valid-feedback">
+           Proximo !
+        </div>
+        </div>
+        <div class="col-md-3">
+          <label for="Cidade" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="Cidade" placeholder="Campinas, Valinhos, Vinhedo, etc..." required>
+        </div>
+        <div class="col-md-3">
+          <label for="Estado" class="form-label">Estado</label>
+          <select id="Estado" class="form-select" placeholder="Escolha..." required >
+            <option>Acre (AC)</option>
+            <option>Alagoas (AL)</option>
+            <option>Amapá (AP)</option>
+            <option>Amazonas (AM)</option>
+            <option>Bahia (BA)</option>
+            <option>Ceará (CE)</option>
+            <option>Distrito Federal (DF)</option>
+            <option>Espírito Santo (ES)</option>
+            <option>Goiás (GO)</option>
+            <option>Maranhão (MA)</option>
+            <option>Mato Grosso (MT)</option>
+            <option>Mato Grosso do Sul (MS)</option>
+            <option>Minas Gerais (MG)</option>
+            <option>Pará (PA)</option>
+            <option>Paraíba (PB)</option>
+            <option>Paraná (PR)</option>
+            <option>Pernambuco (PE)</option>
+            <option>Piauí (PI)</option>
+            <option>Rio de Janeiro (RJ)</option>
+            <option>Rio Grande do Norte (RN)</option>
+            <option>Rio Grande do Sul (RS)</option>
+            <option>Rondônia (RO)</option>
+            <option>Roraima (RR)</option>
+            <option>Santa Catarina (SC)</option>
+            <option>São Paulo (SP)</option>
+            <option>Sergipe (SE)</option>
+            <option>Tocantins (TO)</option>
+          </select>
+          <div class="invalid-feedback">
+           
+        </div>
+        <div class="valid-feedback">
+           Proximo !
+        </div>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">ZapZap</label>
+          <input type="text" class="form-control" id="inputZip" placeholder="exemplo: (00)00000-0000" required>
+          <div class="invalid-feedback">
+           
+        </div>
+        <div class="valid-feedback">
+           Proximo !
+        </div>
+        </div>
+        <div class="col-8">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Comfirme as Imformações
+            </label>
+          </div>
+        </div>
+        <div class="col-8">
+
+          <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#mteste" >Manutenção</button>
+          <div  class="modal fade" id="mteste">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">  Manutenção</h5>
+                              <button  class="btn-close" data-bs-dismiss="modal" ></button>
+                      </div>
+                      <div class="modal-body">
+                          <p>Nosso Sistema de Login esta com uma falha de dados</p>
+                          <p>Por favor invente os Dados acima e clique em logar para ser redirecionado ao nosso site</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-target="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save</button>
+                      </div>
+                  </div>
+              </div>   
+          </div>
+          <a href="../pags2/home.html"  class="btn btn-primary">Logar</a>
+        </div>
+      </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

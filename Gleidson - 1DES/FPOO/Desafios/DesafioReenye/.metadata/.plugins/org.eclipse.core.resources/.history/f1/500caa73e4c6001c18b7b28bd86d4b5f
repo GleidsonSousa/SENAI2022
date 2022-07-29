@@ -1,0 +1,17 @@
+package controle;
+
+import java.util.ArrayList;
+
+import modelo.PlanilhaUsuarios;
+
+public class ProcessaDados3 {
+	private static ArrayList<PlanilhaUsuarios> linhas = new ArrayList<PlanilhaUsuarios>();
+	private static DAO dao = new DAO(); 
+	public static void carregar() {
+		linhas = dao.abrir();
+	}
+	
+	public static void saida(String email, String senha) {
+		dao.validarConta(email, senha, linhas);
+	}
+}

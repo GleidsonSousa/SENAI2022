@@ -1,0 +1,27 @@
+package modelo;
+
+
+
+public class PlanilhaMedias {
+
+
+	private String nome;
+	private int nota1;
+	private int nota2;
+	private int nota3;
+
+
+	public PlanilhaMedias(String entrada) {
+		nome = (entrada.split(";")[0]);
+		nota1 = Integer.parseInt(entrada.split(";")[1]);
+		nota2 = Integer.parseInt(entrada.split(";")[2]);
+		nota3 = Integer.parseInt(entrada.split(";")[3]);
+	}
+
+	public String toString() {
+		int media = (nota1+nota2+nota3)/3;
+		
+		return nome +";"+ media;
+	
+	}
+}

@@ -1,0 +1,44 @@
+*{
+    margin:0;
+}
+
+.nav-item{
+    font-size: 25px;
+}
+.nav-link:hover
+{   
+    transform: scale(1.05);
+    transition:  0.8s;
+    cursor: pointer;
+
+}
+center .h6{
+    margin-top: 1%;
+    font-size:2rem;
+    color:aliceblue;
+}
+.d-block{
+    width: 100%;
+    height: 500px;
+}
+.card-text2{
+    font-size:2rem;
+    color:rgb(160, 155, 7);
+}
+
+.cont-card, .cont-card2{
+    border-radius:2%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.cont-card2 > .card{
+    margin-top: 1%;
+    border-radius:2%;
+}
+
+.card{
+    margin: 3%;
+    border-radius:2%;
+}

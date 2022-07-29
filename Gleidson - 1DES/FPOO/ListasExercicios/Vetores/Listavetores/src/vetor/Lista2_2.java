@@ -1,0 +1,29 @@
+package vetor;
+import java.util.Scanner;
+
+public class Lista2_2 {
+	public static Scanner leitor;
+	public static void main(String[] args) {
+			
+				leitor = new Scanner(System.in);
+			
+					idades();}
+				
+				public static void idades() {
+					leitor = new Scanner(System.in);
+					int[] idades = new int[5];
+					String[] vetor_idades = new String[5];
+					vetor_idades[0] = "idade 1";
+					vetor_idades[1] = "idade 2";
+					vetor_idades[2] = "idade 3";
+					vetor_idades[3] = "idade 4";
+					vetor_idades[4] = "idade 5";
+					for(int i = 0; i < vetor_idades.length; i++) {
+						System.out.println("Digite uma idade:\n" + vetor_idades[i] + ": ");
+						idades[i] = leitor.nextInt();
+	
+					}
+				}
+	}
+
+

@@ -1,0 +1,22 @@
+package exemploclassicos;
+
+import java.util.Scanner;
+
+public class Fatorial {
+public static Scanner ler;
+	public static void main(String[] args) {
+		ler = new Scanner (System.in);
+	int fato = 0  ;
+	System.out.println("Digite um  valor");
+	fato =  ler.nextInt();
+	System.out.println("A fatorial de:" + fato);
+	}
+		public int Fatorial( int numero) {
+		int fat = 1;	
+			for (int i = 1; i <= numero; i++) {
+				fat *= i;
+
+	}
+			return fat;
+		}
+}

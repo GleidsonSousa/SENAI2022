@@ -1,0 +1,134 @@
+
+header{
+    display:flex;
+    background-color:rgba(35, 36, 54, 0.705);
+   
+    height:60px;
+    width: 100%;
+
+}
+
+
+
+body{
+    background-color: rgba(179, 179, 179, 0.315);
+    width: 100%;
+    margin-left: -0.01%;
+    margin-top: -0.01%;
+
+
+}
+
+.caixa{
+    margin-left: 1%;
+    margin-top:1.5%;
+    width: 25vw;
+    height: 25vh;
+    border-radius: none;
+    background-color: white;
+    padding-left: 1%;
+    padding-top: 0.50%;
+    padding-bottom: 1.25%;
+    padding-right: 5%;
+
+}
+
+.border{
+
+    border-bottom: 2px solid rgba(128, 128, 128, 0.233);
+}
+
+.principal{
+
+    display:grid;
+    grid-template-rows: repeat(4,14vh);
+    grid-template-columns: 16vw 16vw ;
+    grid-template-areas: "casa1 casa2" "casa3 casa4" "casa5 casa6 " "casa7 casa8" ;
+   
+    margin-top: 2%;
+    margin-left: 1%;
+    
+
+}
+.casa1{
+    grid-area: casa1;
+    padding-left: 4%;
+   border: 2px solid rgb(255, 255, 255);
+   color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+    
+   
+
+}
+.casa2{
+    grid-area: casa2;
+    padding-left: 4%;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+}
+.casa3{
+    grid-area: casa3;
+    padding-left: 4%;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+}
+.casa4{
+    grid-area: casa4;
+    padding-left: 4%;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+}
+
+ .casa5{
+    grid-area: casa5;
+    padding-left: 4%;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+ }
+
+ .casa6{
+    grid-area: casa6;
+    padding-left: 4%;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+ }
+
+ .casa7{
+    grid-area: casa7;
+    padding-left: 4%;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+    
+    
+ }
+
+ .casa8{
+    
+    grid-area: casa8;
+    padding-left: 4%;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-items:center;
+    background-color:rgb(0, 153, 255);
+
+ }
+ .number{
+
+    padding-left: 80%;
+    padding-top:-100px;
+    font-size: 50px;
+ }
+ 

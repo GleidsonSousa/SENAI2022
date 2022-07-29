@@ -1,0 +1,117 @@
+
+*{
+    margin:0;
+}
+
+.nav-item{
+    font-size: 25px;
+}
+
+.nav-link:hover
+{   
+    transform: scale(1.05);
+    transition:  0.8s;
+    cursor: pointer;
+}
+
+.d-block2{
+
+    margin-left: 5%;
+}
+
+.text-center{
+    
+    margin-top: 3%;
+    font-size: 50px;
+}
+
+.lh-sm{
+    font-size:22px;
+    width:75%;
+    margin-left:15%;
+    font-weight: bold;
+    color: white;
+}
+.fundo{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding-bottom: 1.5%; 
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(10, 1, 1);
+    height: 10vh;
+    color: rgb(249, 246, 246);
+    padding: 5vh 10vw;
+    padding-bottom: 12rem;
+}
+
+.footerCol  a{
+   
+    text-decoration: none;
+    color: rgb(250, 247, 247);  
+    
+}
+.hoyo{
+    width:10rem;
+}
+.footerCol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    margin-bottom: .8rem;
+    text-decoration: none;
+    
+}
+
+
+.seta{
+    width:5rem;
+    margin-left:80%;
+    
+}
+
+
+
+.nav-link:hover
+{   
+    transform: scale(1.05);
+    transition:  0.8s;
+    cursor: pointer;
+
+}
+.footerTitle{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: rgb(170, 251, 138);
+   
+}
+
+.footerEl{
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+   transition:  1s;
+    cursor: pointer;
+    
+    
+}
+
+.footerEl:hover{
+    color: rgb(170, 251, 138);;
+    transform: scale(1.05);
+
+}
+.ic1{
+    width: 95px;
+    filter: invert(73%) sepia(1%) saturate(0%) hue-rotate(341deg) brightness(82%) contrast(87%);
+    margin-right: 5px;
+}
+.ic{
+    width: 25px;
+    filter: invert(73%) sepia(1%) saturate(0%) hue-rotate(341deg) brightness(82%) contrast(87%);
+    margin-right: 5px;
+}

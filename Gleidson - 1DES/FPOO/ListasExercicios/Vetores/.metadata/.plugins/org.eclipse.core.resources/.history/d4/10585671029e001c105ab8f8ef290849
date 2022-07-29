@@ -1,0 +1,47 @@
+package tarefa;
+
+import java.util.Scanner;
+
+public class exercicios {
+
+	public static void main(String[] args) {
+             int opc;
+             Scanner aluno;
+            
+     
+             aluno = new Scanner(System.in);
+     		
+             System.out.println("         menu");
+             System.out.println(" Cadstrar um aluno:");
+             System.out.println(" Buscar aluno por nota:");
+             System.out.println(" Média do aluno:");
+             System.out.println(" Sair");
+    		
+        		opc= aluno.nextInt();    
+        		
+        		switch(opc) {
+        		
+        		
+        		case 1:
+        		   break;
+        		case 2:
+        		    break;
+        		case 3:
+        		    break;
+        		
+        		case 0:
+        		  System.out.println("saindo...");
+        		  
+        		  default:
+        		  System.out.println("opção invalida");
+        		}
+        	  
+          
+         
+		
+  
+
+
+}
+
+}

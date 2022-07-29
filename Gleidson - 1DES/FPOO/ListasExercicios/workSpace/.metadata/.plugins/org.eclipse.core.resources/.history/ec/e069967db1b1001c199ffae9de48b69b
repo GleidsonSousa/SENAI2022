@@ -1,0 +1,13 @@
+package modelo;
+
+public class Gato {
+
+	private int qtdVidas = 7;
+
+	public Gato(int qtdVidas) {
+		super();
+		this.qtdVidas = qtdVidas;
+	}
+}
+
+

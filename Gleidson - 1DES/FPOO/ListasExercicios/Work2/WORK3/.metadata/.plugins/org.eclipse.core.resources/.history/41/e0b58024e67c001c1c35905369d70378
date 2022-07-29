@@ -1,0 +1,15 @@
+package modelo;
+
+public class Matematica {
+
+	public static void main(String[] args) {
+		int V1 - 13;
+		int V2 = 3;
+		System.out.printf("%d+%d = %d",V1,V2,V1+V2);
+		System.out.printf("%d/%d = %d",V1,V2,V1*V2);
+		System.out.printf("%d-%d = %d",V1,V2,V1-V2);
+		System.out.printf("%d*%d = %d",V1,V2,V1/V2);
+
+	}
+
+}

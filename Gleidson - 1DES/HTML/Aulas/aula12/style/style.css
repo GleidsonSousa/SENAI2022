@@ -1,0 +1,50 @@
+*{
+    font-family: arial;
+}
+.textos{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.textos p a{
+    color: rgb(94, 94, 250);
+    text-decoration: none;
+    text-decoration: underline;
+}
+.ListaA{
+
+display: flex;
+justify-content:space-between;
+width:350px;
+margin-left: 2%;
+}
+.ListaB{
+
+    display: flex;
+    justify-content:space-between;
+    width:350px;
+    margin-left: 2%;
+    
+    }
+    .kk{
+
+        margin-left: 2%; 
+    }
+    .kkk{
+    
+        margin-top: -2%;
+        margin-left: 2%;
+    }
+.Proxima{
+    margin-left: 85%;
+    margin-top: -3.5%;
+
+}
+.seila{
+        margin-top: 7%;
+        margin-left: 2%;
+
+
+}

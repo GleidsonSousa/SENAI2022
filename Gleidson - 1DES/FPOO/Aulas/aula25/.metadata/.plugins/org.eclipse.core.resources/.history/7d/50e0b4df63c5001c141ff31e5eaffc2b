@@ -1,0 +1,59 @@
+package control;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import model.Planilha;
+
+public class DAO {
+	private BufferedWriter bw;
+	private BufferedReader br;
+
+	private String entrada = "C:\\Users\\GLEIDSON  1- DES\\Documents\\Gleidson - 1DES\\FPOO\\Aulas\\aula25\\SoluçãoSPOO\\src\\Dados\\entrada.csv";
+	private String saida = "C:\\Users\\GLEIDSON  1- DES\\Documents\\Gleidson - 1DES\\FPOO\\Aulas\\aula25\\SoluçãoSPOO\\src\\Dados\\saida.csv";
+
+	public ArrayList<Planilha> abrir() {
+		ArrayList <Planilha> linhas = new ArrayList();
+		Planilha p;
+		try {
+			br = new BufferedReader (new FileReader (entrada));
+			String l = null;
+			try {
+				l = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			while (l != null);{
+				
+			}
+			try {
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+			
+		return null;
+	}
+
+	public void salvar(ArrayList<Planilha> linhas) {
+		try {
+			bw = new BufferedWriter(new FileWriter(saida));
+			for (Planilha l : linhas ) {
+				bw.write(l.adicao());
+			}
+			bw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

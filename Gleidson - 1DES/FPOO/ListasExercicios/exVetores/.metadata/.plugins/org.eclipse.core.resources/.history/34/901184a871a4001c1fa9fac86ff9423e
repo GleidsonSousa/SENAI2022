@@ -1,0 +1,30 @@
+package exercicios;
+
+import java.util.Scanner;
+
+public class Ex_1 {
+public static Scanner sc =  new Scanner (System.in);
+	public static void main(String[] args) {
+		int[] numbers =  new int[10];
+		
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.println("Digite  um Número INTEIROS!.");
+			numbers[i] = sc.nextInt();
+		}
+		
+		System.out.println("\nNúmeros na ordem normal:\n");
+		
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.print(numbers[i] + " ");
+			System.out.print("\n ");
+		}
+		
+		System.out.println("\n Na ordem inversa:\n");
+		
+		for (int i = numbers.length - 1; i >= 0 ; i--) {
+			System.out.print(numbers[i] + " ");
+		}
+
+	}
+
+}

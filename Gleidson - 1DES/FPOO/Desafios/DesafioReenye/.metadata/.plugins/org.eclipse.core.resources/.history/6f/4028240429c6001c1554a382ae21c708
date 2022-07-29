@@ -1,0 +1,27 @@
+package modelo;
+
+
+
+public class PlanilhaMedias {
+
+
+	private String nome;
+	private float nota1;
+	private float nota2;
+	private float nota3;
+
+
+	public PlanilhaMedias(String entrada) {
+		nome = (entrada.split(";")[0]);
+		nota1 = Float.parseFloat(entrada.split(";")[1]);
+		nota2 = Float.parseFloat(entrada.split(";")[2]);
+		nota3 = Float.parseFloat(entrada.split(";")[3]);
+	}
+
+	public String toString() {
+		float media = (nota1+nota2+nota3)/3;
+		
+		return nome +";"+ media;
+	
+	}
+}

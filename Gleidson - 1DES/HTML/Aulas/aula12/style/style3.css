@@ -1,0 +1,36 @@
+*{
+    font-family: arial;
+  }
+  .textos{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .textos p a{
+    color: rgb(94, 94, 250);
+    text-decoration: none;
+    text-decoration: underline;
+  }
+.Red{
+    width: 1700px;
+    margin-top: 10%;
+    background-color: red;
+    height:225px;
+    margin-left: -3%;
+}
+.Green{
+    background-color: rgb(10, 243, 10);
+    width: 1700px;
+    height:225px;
+    margin-left: -3%;
+
+}
+.Blue{
+    background-color: rgb(44, 44, 233);
+    width: 1700px;
+    height:225px;
+    margin-left: -3%;
+
+}

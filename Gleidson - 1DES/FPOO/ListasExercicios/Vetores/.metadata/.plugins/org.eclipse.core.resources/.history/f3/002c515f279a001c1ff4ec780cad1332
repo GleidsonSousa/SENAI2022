@@ -1,0 +1,11 @@
+package agenda;
+
+public class Conato {
+
+	public static void main(String[] args) {
+		System.out.print("Digite quantos contatos deseja cadastrar:");
+		int qtdCont = scan.nextInt();
+		Contato[] contatos = new Contato[qtdCont];
+	}
+
+}

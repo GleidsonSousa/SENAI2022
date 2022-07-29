@@ -1,0 +1,10 @@
+package modelo;
+
+public class Gato {
+
+	private int qtdVidas = 7;
+	
+
+	}
+
+

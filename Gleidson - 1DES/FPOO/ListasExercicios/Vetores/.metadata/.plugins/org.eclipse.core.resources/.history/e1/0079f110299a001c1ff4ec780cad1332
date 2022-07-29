@@ -1,0 +1,16 @@
+package agenda;
+
+import java.util.Scanner;
+
+public class Contato {
+
+	static Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		System.out.print("Quantos cadastros quer cadstrar:");
+
+
+	}
+
+}

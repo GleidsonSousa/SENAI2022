@@ -1,0 +1,21 @@
+package visao;
+
+import java.util.Scanner;
+
+import control.Processaplanilha;
+import model.Planilha;
+
+public class Tela {
+
+	static Scanner scan = new Scanner(System.in);;
+
+	public static void main(String[] args) {
+		Processaplanilha.carregar();
+		int menu = 0;
+		while (menu != 5) {
+			System.out.println("\n1 - Adição\n2 - Subtração \n3 - Multiplicação \n4 - Divisão\n5 - Sair");
+			menu = scan.nextInt();
+			Processaplanilha.sair(menu);
+			}
+		}
+	}

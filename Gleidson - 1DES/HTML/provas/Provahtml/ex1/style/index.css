@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid;
+}
+body {
+  background-color:#eeccff;
+}
+</style>
+</head>
+<body>
+<center>
+<p class="a"><h2>Quebra - Cabeça</h2></p>
+<img src="../img/panda.jpg" alt="panda" width="400" height="250">
+
+<table>
+  <tr>
+    <th><img src="../img/img13.png" alt="panda" width="120" height="80"></th>
+    <th><img src="../img/img10.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img6.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img5.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img17.png" alt="panda" width="120" height="80"></th>
+  </tr>
+  <tr>
+    <th><img src="../img/img14.png" alt="panda" width="120" height="80"></th>
+    <th><img src="../img/img4.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img8.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img2.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img1.png" alt="panda" width="120" height="80"></th>
+  </tr>
+  <tr>
+    <th><img src="../img/img15.png" alt="panda" width="120" height="80"></th>
+    <th><img src="../img/img20.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img21.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img7.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img9.png" alt="panda" width="120" height="80"></th>
+  </tr>
+  <tr>
+	<th><img src="../img/img24.png" alt="panda" width="120" height="80"></th>
+    <th><img src="../img/img23.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img12.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img18.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img3.png" alt="panda" width="120" height="80"></th>
+  </tr>		
+  <tr>
+	<th><img src="../img/img19.png" alt="panda" width="120" height="80"></th>
+    <th><img src="../img/img25.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img22.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img16.png" alt="panda" width="120" height="80"></th>
+	<th><img src="../img/img11.png" alt="panda" width="120" height="80"></th>
+</tr>
+</table>
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+<button>Default Button</button>
+
+
+</center>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+package modelo;
+
+public class Cao extends Animal{
+
+	private int qtMotoqueirosAtacados;
+
+	public Cao(int qtMotoqueirosAtacados, String especie,String nome,float peso,String raca){
+		super(especie,nome,peso,raca);
+		this.qtMotoqueirosAtacados = qtMotoqueirosAtacados;
+	}
+
+}

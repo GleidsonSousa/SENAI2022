@@ -1,0 +1,266 @@
+header{
+
+    display:flex;
+    border-bottom: 2px solid black;
+    margin-bottom: 40px;
+    max-height: 500px;
+}
+
+body{
+
+    background-color: #f0ecec;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    border: none;
+    width: 250px;
+    background: none;
+    font-style: italic;
+    outline: none!important;
+}
+img{
+    width: 300px;
+}
+
+.main{
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main2 {
+    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0  px;
+    grid-row-gap: 30px;
+}
+
+
+.div
+
+{
+    font-weight: bold;
+    font-size: 25px;
+    padding:2%;
+padding-left: 0.50%;
+    
+}
+.dolar{
+    font-size: 25px;
+    padding:2%;
+    color: rgb(255, 0, 21);
+    padding-left: 0.01%;
+}
+.euro
+{
+    font-size: 25px;
+    padding:2%;
+    padding-left: 0.01%;
+    color: rgb(0, 255, 0);
+}
+.clima{   
+    font-size: 25px;
+    padding:2%;
+    padding-left: 0.01%;
+    color: rgb(72, 130, 238);
+}
+
+
+
+.search{
+    position: absolute;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 3px 5px;
+    background-color: #b0acac;
+    top:3.6%;
+    width:280px;
+    height:25px;
+}
+
+
+
+.imagelupa{
+    float:right;
+  height:25px;
+  width:25px;
+ 
+ 
+ 
+}
+
+
+.logo{
+
+    padding:1%;
+    padding-left: 18%;
+    width: 100px;
+    height: 100px;
+    margin-top: -1%;
+}
+
+
+
+.temas{
+    margin-right:2.5%;
+    float:right;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    font-size: 2.0rem;
+    margin-right: 20%;
+    height:470px;
+
+}
+.themes-title{
+    border-bottom: 1px solid black;
+    padding: 8px 10px!important;
+    margin: 0!important;
+}
+
+.themes-i-first{
+    margin-top: 20px!important;
+}
+
+.themes-i{
+    margin:0 20px 20px 20px;
+    padding: 0 0 18px 0;
+    border-bottom: 1px solid black;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div5 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.div6 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.hl-txt h3{
+    margin-bottom: 30px;
+    font-size: 17pt;
+}
+
+.hl-txt p{
+    font-size: 10pt;
+}
+
+@media(max-width:1030px){
+  img{
+       margin-left: -25%;
+       
+
+  }
+ .temas{
+    display:flex;
+    margin-left: 55%;
+ }
+.imagelupa{
+   left:113%;
+  height:25px;
+  width:25px;
+  position: absolute;
+
+}
+  .search{
+    position: absolute;
+right: 66%;
+top:13.5%;
+}
+.logo{
+   margin-left: 15%;
+}
+
+
+
+}
+
+
+@media(max-width:1285px){
+    .main{
+        padding: 0 10%;
+        display: flex;
+    }
+    .hl-txt h3{
+        margin-bottom: 300px;
+        font-size: 8pt;
+        display: flex;
+        justify-content: space-between;
+        width: 450px;
+    }
+    
+    .hl-txt p{
+        font-size: 1pt;
+
+    }
+    
+}
+@media(max-width:1500px){
+    .temas{
+        margin-right:2.5%;
+        float:right;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        font-size: 2.0rem;
+        margin-right: 20%;
+        height:800px;
+        width:600px;
+        margin-left: 40%;
+    }
+    .themes-title{
+        border-bottom: 1px solid black;
+        padding: 8px 10px!important;
+        margin: 0!important;
+        padding-left: 10%;
+    }
+    .themes-i-first{
+        margin-top: 20px!important;
+        padding-left: 10%;
+    }
+    .themes-i{
+        margin:0 20px 20px 20px;
+        padding: 0 0 18px 0;
+        border-bottom: 1px solid black;
+        padding-left: 10%;
+    }
+}
+
+@media(max-width:1700px){
+
+    .hl-txt h3{
+        margin-bottom: 30px;
+        font-size: 17pt;
+        margin-left: 8%;
+    }
+    .hl-txt p{
+        font-size: 10pt;
+        margin-left: 8%;
+    }   
+}

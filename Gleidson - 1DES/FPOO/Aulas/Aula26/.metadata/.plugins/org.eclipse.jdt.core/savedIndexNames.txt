@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\Meu Computador\Desktop\senai-2022\meugit\SENAI2022\Gleidson - 1DES\FPOO\Aulas\Aula26\.metadata\.plugins\org.eclipse.jdt.core
+769535406.index
+959902891.index
+542368613.index
+1865797976.index
+1734703654.index
+2889097430.index

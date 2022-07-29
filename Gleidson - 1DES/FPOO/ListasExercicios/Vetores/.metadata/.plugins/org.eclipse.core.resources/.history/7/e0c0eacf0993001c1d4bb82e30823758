@@ -1,0 +1,10 @@
+package exemploclassicos;
+
+public class Acumula {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

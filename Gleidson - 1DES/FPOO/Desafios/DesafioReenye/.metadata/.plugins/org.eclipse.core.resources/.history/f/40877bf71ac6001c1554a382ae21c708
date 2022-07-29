@@ -1,0 +1,12 @@
+package modelo;
+
+import java.util.ArrayList;
+
+public class PlanilhaPessoas {
+
+	public PlanilhaPessoas(ArrayList<PlanilhaPessoas> linhas) {
+	
+	}
+	}
+
+

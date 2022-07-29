@@ -1,0 +1,50 @@
+package exercicios;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ex_3 {
+public static Scanner sc = new Scanner (System.in);
+	public static void main(String[] args) throws IOException {
+		System.out.println("Digite 10 valores");
+		int [] nume = new int [10];
+		nume [0] = sc.nextInt();
+		nume [1] = sc.nextInt();
+		nume [2] = sc.nextInt();
+		nume [3] = sc.nextInt();
+		nume [4] = sc.nextInt();
+		nume [5] = sc.nextInt();
+		nume [6] = sc.nextInt();
+		nume [7] = sc.nextInt();
+		nume [8] = sc.nextInt();
+		nume [9] = sc.nextInt();
+		
+		int ImpPar [] = new int [10];
+		ImpPar [0] = nume [0];
+		ImpPar [1] = nume [1];
+		ImpPar [2] = nume [2];
+		ImpPar [3] = nume [3];
+		ImpPar [4] = nume [4];
+		ImpPar [5] = nume [5];
+		ImpPar [6] = nume [6];
+		ImpPar [7] = nume [7];
+		ImpPar [8] = nume [8];
+		ImpPar [9] = nume [9];
+		int in = ImpPar [0];
+		int f = ImpPar [9];
+		int pardiv = 0;
+		int multImp = 0;
+		for(int i = in; i <= f; i++) {
+			if(i%2 == 0) {
+		 pardiv = (i/2)+(i/2)+(i/2)+(i/2)+(i/2)+(i/2)+(i/2)+(i/2)+(i/2)+(i/2);
+				
+			}else {
+				multImp =(i*3)+(i*3)+(i*3)+(i*3)+(i*3)+(i*3)+(i*3)+(i*3)+(i*3)+(i*3);				
+			}
+		}
+		System.out.println(pardiv + "\t");
+		System.out.println(multImp + "\t");	
+	}
+}
+
+

@@ -1,0 +1,10 @@
+package modelo;
+
+public class Transporte {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

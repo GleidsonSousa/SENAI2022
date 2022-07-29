@@ -1,0 +1,90 @@
+*{
+    font-family: arial;
+}
+
+
+p{
+    padding-top: 0px;
+    font-size: 20px;
+}
+
+.text{
+padding: 0;
+display: flex;
+justify-content: space-between;
+width: 90%;
+}
+
+.textos p a{
+    color: rgb(94, 94, 250);
+    text-decoration: none;
+    text-decoration: underline;
+  }
+
+.fundo{
+    height: 100vh;
+    background-image: url(../img/Wallpaper.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width:1650px;
+    height:800px;
+    
+}
+
+.barra{
+    background-color: rgba(255, 255, 255, 0.356);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: column;
+}
+
+.text1{
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   margin-left: 20px;
+   align-items: center;
+}
+
+.text1 > span{
+    margin-left: 20px;
+    padding: 1px;
+   
+}
+
+.text1 a img{
+    height: 30px;
+    padding: 2px;
+    
+}
+
+.data{
+    margin-right: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.fo0ter{
+    background-color: rgba(255, 255, 255, 0.384);
+    border-radius: 20px;
+    width: 50%;
+    height: 65px;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: column;
+}
+
+.menu  a  img {
+    height: 60px;
+    align-items: center;
+    margin-left: 20px;
+}

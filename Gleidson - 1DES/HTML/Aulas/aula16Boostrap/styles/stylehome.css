@@ -1,0 +1,115 @@
+*{
+    margin:0;
+}
+
+.nav-item{
+    font-size: 25px;
+}
+.d-block{
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-left: 19%;
+    width: 1200px;
+    height: 600px;
+}
+
+.main{
+    background-image: url(../assets/fundoB.webp);
+    width:100%;
+    padding-bottom: 1.5%;
+    
+}
+
+.lh-sm{
+    font-size:22px;
+    width:75%;
+    margin-left:15%;
+    font-weight: bold;
+}
+.text-center{
+    
+    margin-top: 3%;
+    font-size: 50px;
+}
+
+.d-block2{
+    justify-items: center;
+    border-radius: 1%;
+    margin-top: 3%;
+    margin-left: 24%;
+    width: 1000px;
+    height: 500px;
+}
+.resumo{
+    color: aqua;
+}.seta{
+    width:4rem;
+    margin-left: 85%;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(10, 1, 1);
+    height: 10vh;
+    color: rgb(249, 246, 246);
+    padding: 5vh 10vw;
+    padding-bottom: 12rem;
+}
+.footerCol  a{
+   
+    text-decoration: none;
+    color: rgb(250, 247, 247);  
+    
+}
+.hoyo{
+    width:10rem;
+}
+.footerCol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    margin-bottom: .8rem;
+    text-decoration: none;
+    
+}
+
+.nav-link:hover
+{   
+    transform: scale(1.05);
+    transition:  0.8s;
+    cursor: pointer;
+
+}
+.footerTitle{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: rgb(170, 251, 138);
+   
+}
+
+.footerEl{
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+   transition:  1s;
+    cursor: pointer;
+    
+    
+}
+
+.footerEl:hover{
+    color: rgb(170, 251, 138);;
+    transform: scale(1.05);
+
+}
+.ic1{
+    width: 95px;
+    filter: invert(73%) sepia(1%) saturate(0%) hue-rotate(341deg) brightness(82%) contrast(87%);
+    margin-right: 5px;
+}
+.ic{
+    width: 25px;
+    filter: invert(73%) sepia(1%) saturate(0%) hue-rotate(341deg) brightness(82%) contrast(87%);
+    margin-right: 5px;
+}

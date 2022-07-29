@@ -1,0 +1,50 @@
+*{
+    font-family: arial;
+  }
+  .textos{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .textos p a{
+    color: rgb(94, 94, 250);
+    text-decoration: none;
+    text-decoration: underline;
+  }
+  .div{
+    background-color: #CF4545;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 80%;
+    font-size: 25px;
+    color: white;
+}
+
+.div2{
+    background-color: #753535;
+    padding: 10%;
+}
+
+
+.div3{
+    background-color: #9F3D3D;
+    padding: 1%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div2 a img{
+   border-radius: 30px;
+   position: relative;
+   left: 50%;
+   transform: translate(-50%)
+}
+
+.div4{
+    background-color: white;
+    padding: 1%;
+    width: 250px;
+    border-radius: 30px;
+}

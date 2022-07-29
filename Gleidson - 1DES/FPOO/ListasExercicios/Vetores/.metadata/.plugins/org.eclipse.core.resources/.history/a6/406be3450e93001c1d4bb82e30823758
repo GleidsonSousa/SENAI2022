@@ -1,0 +1,22 @@
+package exemploclassicos;
+
+public class Acumula {
+
+	public static void main(String[] args) {
+		System.out.println("O algoritimo de acumulção simples");
+		System.out.println("simples,retornou=");
+		System.out.println(simples(0));
+	}
+
+	
+	public static int simples(int interacoes) {
+		int x =0;
+		for (int i = 0; i <10; i++);
+		x+=i;
+		return x;
+
+		
+}
+	
+	
+}

@@ -1,0 +1,72 @@
+package viewers;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+import java.util.Locale;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+import controllers.ProcessManutencoes;
+import models.Manutencao;
+
+ 
+	public class FormManutencoes extends JDialog implements ActionListener {
+
+		private static final long serialVersionUID = 1L;
+		private JPanel painel;
+		private JLabel id, data, equipamento, custoHora , tempoGasto;
+		private JTextField tfId, tfData, tfEquipamento, tfCustoHora, tfTempoGasto; 
+		private JScrollPane rolagem;
+		private JTable table;
+		private DefaultTableModel tableModel;
+		private JButton create, read, update, delete;
+		private int autoIds = ProcessManutencoes.manutencoes.get(ProcessManutencoes.manutencoes.size()-1).getId() + 1;
+
+		private final Locale BRASIL = new Locale("pt", "BR");
+		private DecimalFormat df = new DecimalFormat("#.00");
+		public FormManutencoes() {
+			setTitle("Cadastro de Manutenções");
+			setBounds(150, 170, 800, 600);
+		painel = new JPanel();
+		painel.setBackground(new Color(160, 160, 160));
+		setContentPane(painel);
+		setLayout(null);
+		
+		id = new JLabel("Id:");
+		id.setBounds(20, 20, 120, 30);
+		painel.add(id);
+		data = new JLabel("Data:");
+		data.setBounds(20, 60, 120, 30);
+		painel.add(data);
+		equipamento = new JLabel("Equipamento:");
+		equipamento.setBounds(20, 100, 120, 30);
+		painel.add(equipamento);
+		equipamento = new JLabel("Custo por Hora:");
+		equipamento.setBounds(20, 140, 120, 30);
+		painel.add(equipamento);
+		equipamento = new JLabel("Tempo Gasto:");
+		equipamento.setBounds(20, 180, 120, 30);
+		painel.add(equipamento);
+		
+}		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			
+		}
+		public static void main(String[] args) {
+			ProcessManutencoes.abrir();
+			FormManutencoes tela = new FormManutencoes();
+			tela.setVisible(true);
+		}
+	}
+

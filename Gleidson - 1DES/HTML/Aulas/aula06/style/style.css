@@ -1,0 +1,41 @@
+*{
+    margin:0;
+  background-repeat: no-repeat;
+background-image: url('../img/windows-10-2.jpg');
+background-size: 1900px;
+}
+.BARRA{
+    background-image: none;
+    background-color: white;
+    margin: 0;
+    margin-top: 0%;
+    padding: 1px;
+    width: 1900px;
+    height: 60px;
+    display: flex;
+
+}
+img{
+
+    background-image: none;
+    padding: 12px;
+    justify-content: space-evenly;
+}
+
+.u{
+  
+    margin-left: 67%;
+}
+.BOX{
+    margin-top: 6%;
+    height: 800px;
+    width: 900px;
+    background-image: none;
+    background-color: gray;
+}
+ .P{
+     background-image: none;
+ }
+   
+
+

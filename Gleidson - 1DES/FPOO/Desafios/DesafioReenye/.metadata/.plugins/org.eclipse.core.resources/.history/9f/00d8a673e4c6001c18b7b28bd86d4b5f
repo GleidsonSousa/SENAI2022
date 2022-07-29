@@ -1,0 +1,40 @@
+package modelo;
+
+import java.util.ArrayList;
+
+public class PlanilhaUsuarios {
+	
+	private String email;
+	private String senha;
+	
+	public PlanilhaUsuarios(String linha) {
+		email = linha.split(";")[0];
+		senha = linha.split(";")[1];
+	}
+	
+	public boolean validaEmail(String email, ArrayList<PlanilhaUsuarios> logins) {
+		boolean sucesso = false;
+		for (PlanilhaUsuarios usuarios : logins) {
+			if (this.email.equals(usuarios.email)) {
+				sucesso = true;
+				break;
+			}
+		}
+		
+		return sucesso;
+	}
+	
+	public boolean validaSenha(String email, String senha, ArrayList<PlanilhaUsuarios> logins) {
+		boolean validacao = false;
+		
+		for (PlanilhaUsuarios usuario : logins) {
+			if (this.email.equals(usuario.email) && this.senha.equals(usuario.senha)) {
+				validacao = true;
+				break;
+			}
+		}
+		
+		return validacao;
+	}
+
+}

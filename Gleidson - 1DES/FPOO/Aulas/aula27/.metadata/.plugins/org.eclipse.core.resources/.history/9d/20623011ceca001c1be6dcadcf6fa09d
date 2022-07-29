@@ -1,0 +1,32 @@
+package controle;
+
+import java.util.ArrayList;
+
+import modelo.Pets;
+
+public class PetsProcess {
+
+	public static ArrayList<Pets> usuarios = new ArrayList<>();
+	private static PetsDAO id = new PetsDAO();
+
+	public static void carregar() {
+		usuarios = id.abrir();
+	}
+
+	public static int checarEmail(String email) {
+		int retorno = -1;
+		for (int i = 0; i < usuarios.size(); i++) {
+			if (usuarios.get(i).equals(email)) {
+				return i;
+			}
+		}
+		return retorno;
+	}
+
+	public static boolean checarSenha(int indice, String senha) {
+		if (usuarios.get(indice).equals(senha)) {
+			return true;
+		}
+		return false;
+	}
+}

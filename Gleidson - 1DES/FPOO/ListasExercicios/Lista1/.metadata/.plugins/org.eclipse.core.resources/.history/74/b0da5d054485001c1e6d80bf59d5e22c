@@ -1,0 +1,21 @@
+package Exercises2;
+
+import java.util.Scanner;
+public class SF {
+public static Scanner entrada;
+public static void main(String[] args) {
+	
+			entrada = new Scanner(System.in);
+			int f;
+			double salario;
+			System.out.print("Digite o seu salário: ");
+			salario = entrada.nextDouble();
+			if(salario <1655.98);
+			System.out.println("Se vira você não tem direito");
+       		}else{
+       			int f;
+    	   	System.out.println("Quantos filhos se enquadram na regra do SF");
+		
+       				
+}		
+}

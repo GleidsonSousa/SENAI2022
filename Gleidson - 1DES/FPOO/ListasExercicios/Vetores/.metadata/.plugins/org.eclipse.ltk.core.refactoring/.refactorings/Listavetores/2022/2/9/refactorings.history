@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;vetor.Correção2_2&apos; to &apos;Correcao2_2&apos;&#x0D;&#x0A;- Original project: &apos;Listavetores&apos;&#x0D;&#x0A;- Original element: &apos;vetor.Correção2_2&apos;&#x0D;&#x0A;- Renamed element: &apos;vetor.Correcao2_2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Correção2_2&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;vetor{Correção2_2.java[Correção2_2" matchStrategy="1" name="Correcao2_2" qualified="false" references="true" similarDeclarations="false" stamp="1645440707714" textual="false" version="1.0"/>
+</session>

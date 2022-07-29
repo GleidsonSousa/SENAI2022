@@ -1,0 +1,18 @@
+package modelo;
+
+public class Gato extends Animal{
+
+	private int qtdVidas = 7;
+
+	public Gato( String especie,String nome,String raca,float peso,int qtdVidas) {
+		super(especie,nome,peso,raca);
+		this.qtdVidas = qtdVidas;
+	}
+
+	@Override
+	public String toString() {
+		return "\n Gatos: \n Quantidade de Vidas = " +"["+ qtdVidas + "]\n"+ super.toString();
+	}
+}
+
+

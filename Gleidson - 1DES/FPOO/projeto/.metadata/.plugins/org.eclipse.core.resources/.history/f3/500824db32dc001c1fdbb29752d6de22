@@ -1,0 +1,26 @@
+package controlePaciente;
+
+import java.util.ArrayList;
+import modeloPaciente.Pacientes;
+public class PacientesProcess {
+
+	public static ArrayList<Pacientes> pacientes = new ArrayList<>();
+	private static PacientesDAO pcd = new PacientesDAO();
+	
+	public static void abrir() {
+		pacientes = pcd.ler();
+		if(pacientes.size() == 0) {
+			
+		}
+	}
+	
+	public static void salvar() {
+		pcd.escrever(pacientes);
+	}
+}
+		
+	
+			
+	
+	
+	

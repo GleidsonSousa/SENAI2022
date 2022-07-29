@@ -1,0 +1,30 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Desafio arq = new Desafio ();
+		Scanner sc = new Scanner(System.in);
+		
+	
+		
+	
+			System.out.println("1 - Digite o que deseja ver no HTML;");
+			
+			
+					System.out.println("Escreva aqui: ");
+					String escrever = sc.nextLine();
+					
+					String data = escrever;
+					
+					arq.escrever(data, "index", true);
+				
+		
+		
+	}
+
+}

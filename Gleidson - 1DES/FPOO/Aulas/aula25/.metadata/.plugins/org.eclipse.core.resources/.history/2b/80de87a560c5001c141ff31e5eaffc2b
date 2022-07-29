@@ -1,0 +1,12 @@
+package control;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+
+public class DAO {
+	private BufferedWriter bw;
+	private BufferedReader br;
+	
+	private String entrada = "C:\\Users\\GLEIDSON  1- DES\\Documents\\Gleidson - 1DES\\FPOO\\Aulas\\aula25\\SoluçãoSPOO\\src\\Dados\\entrada.csv";	
+	private String saida;
+}

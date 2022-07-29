@@ -1,0 +1,47 @@
+package modelo;
+
+import java.util.Scanner;
+
+public class Media {
+ public static Scanner entrada;
+	public static void main(String[] args) {
+		entrada = new Scanner (System.in);
+		Double salario,desconto,Total,desconto2,desconto3,desconto4;
+		System.out.printf("digite seu salario\n");
+		salario = entrada.nextDouble();
+		 desconto = salario * 7.5/100 ;
+		Total = salario - desconto;
+		
+		if (desconto<=1202.01){
+			
+			System.out.println("desconto do inns é: \n"+ desconto);
+			System.out.println("O total a receber é: \n"+Total);
+			
+			
+		
+			
+		}else{
+			desconto2 = salario * 14/100;
+			if (desconto2<=7087.88);
+			Total = salario - desconto2;
+			System.out.println("desconto do inns é: \n"+ desconto2);
+			System.out.println("O total a receber é: \n"+Total);
+			desconto3 = salario* 9/100;
+			Total = salario - desconto3;
+			if (desconto3<=2012.35);
+			System.out.println("desconto do inns é: \n"+ desconto3);
+			System.out.println("O total a receber é: \n"+Total);
+		
+		
+	
+			
+			
+			
+
+		}
+		
+		
+		
+		
+	}
+}

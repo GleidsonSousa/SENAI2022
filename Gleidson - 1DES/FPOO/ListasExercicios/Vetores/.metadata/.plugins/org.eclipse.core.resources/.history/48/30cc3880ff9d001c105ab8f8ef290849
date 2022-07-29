@@ -1,0 +1,22 @@
+package tarefa;
+
+import java.util.Scanner;
+
+public class exercicios {
+
+	public static void main(String[] args) {
+             int opc;
+             Scanner aluno;
+            
+             
+          
+           aluno = new Scanner(System.in);
+		
+		
+		
+		
+		
+    
+	}
+
+}

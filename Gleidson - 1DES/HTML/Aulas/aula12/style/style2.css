@@ -1,0 +1,28 @@
+*{
+  font-family: arial;
+}
+.textos{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.textos p a{
+  color: rgb(94, 94, 250);
+  text-decoration: none;
+  text-decoration: underline;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 15%;
+    margin-left: 15%;
+   height:300px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }

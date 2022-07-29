@@ -1,0 +1,12 @@
+package modelo;
+
+public class Cao {
+
+	private int qtMotoqueirosAtacados;
+
+	public Cao(int qtMotoqueirosAtacados, String especie,String nome,float peso,String raca){
+		super();
+		this.qtMotoqueirosAtacados = qtMotoqueirosAtacados;
+	}
+
+}

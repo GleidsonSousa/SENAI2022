@@ -1,0 +1,54 @@
+package model;
+import java.util.ArrayList;
+import java.util.Scanner;
+import model.Desafiolistar;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Desafio arq = new Desafio ();
+		Scanner sc = new Scanner(System.in);
+		
+		int opcao = 0;
+		
+		do {
+			System.out.println("1 - Escreva no HTML;");
+			System.out.println("2 - Crie uma lista no HTML;");
+			System.out.println("3 - Crie uma tabela no HTML;");
+			System.out.println("4 - Sair.");
+			
+			opcao = sc.nextInt();
+			sc.nextLine();
+			
+			switch(opcao) {
+				case 1: 
+					System.out.println("Escreva aqui: ");
+					String escrever = sc.nextLine();
+					String data = "<center><h1>"+escrever+"<h1><center>";
+
+					arq.escrever(data, "index",true);
+					break;
+				case 2:
+					
+					System.out.println("Escreva aqui: ");
+					String escrever2 = sc.nextLine();
+					String data2 = "<center><h2>Aqui está a sua lista: </h2></center>"+"<h1><center>";
+					String data3 ="<ul><li>"+escrever2+"<ul><li>";
+					
+					arq.escrever(data2,data3, true);
+						
+						
+					
+					break;
+				case 3:
+					System.out.println("Isso é tudo pessoal :D ");
+					break;
+			}
+		}while(opcao != 3);
+		
+		
+		
+	}
+
+}
