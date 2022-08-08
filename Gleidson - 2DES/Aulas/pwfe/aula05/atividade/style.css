@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Item-lista{
+    width: 80vw;
+    height: 10vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    margin: 15px;
+    padding: 0 15px;
+}
+
+.Item-lista > button > img{
+    width: 50px;
+}
+#img-item{
+    width: 8vh;
+    height: 8vh;
+}
+
+/* .modelo{
+    visibility: hidden;
+    display:none;
+} */

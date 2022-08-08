@@ -54,8 +54,8 @@ function buscarNome(){
 
     linhas.forEach((Linha) => {
         let temp = Linha.querySelector("td");
-
         if(temp != null){
+            
 
         //     if(temp.innerHTML.toLowerCase() == busca.value.toLowerCase()) {
         //    alert("encontrei");
@@ -64,8 +64,9 @@ function buscarNome(){
         //    Linha.style.color = "pink";
 
             //  }  
+
             if(temp.innerHTML.toLowerCase().includes(busca.value.toLowerCase())){
-                Linha.style.display = "";
+                Linha.style.display = "table-row";
             }  else{
                 Linha.style,display = "none";
             }

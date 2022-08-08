@@ -1,0 +1,265 @@
+body{
+    background-color: #000000;
+    font-size: 18px;
+    color: rgb(14, 13, 13);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 15%;
+}
+
+header{
+    height: 100px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    margin-top: -60%;
+    width: 1000px;
+}
+.titulo{
+    color: rgb(255, 255, 255);
+    
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.btn{
+    font-size: 25px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.texto {
+    background-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+
+}
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.container2{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+textarea{
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+
+@media(max-width:1300px){
+
+    body{
+        background-color: #000000;
+      
+    }
+
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 500px;
+    }
+    .container2{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    main{
+        display: table-column;
+        flex-direction: row;
+    }
+    
+    
+
+}
+
+@media(max-width:1025px){
+
+    body{
+        background-color: #000000;
+      
+    }
+
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 400px;
+    }
+    .container2{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .logo{
+        margin-top: -45%;
+        width: 600px;
+
+}
+    
+
+}
+
+@media(max-width:420px){
+
+    body{
+        background-color: #000000;
+      
+    }
+
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 150px;
+    }
+    .container2{
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    main{
+        display: table-column;
+        flex-direction: row;
+    }
+    
+    .logo{
+        margin-top: -45%;
+        width: 300px;
+
+}
+}
+
+@media(max-width:359px){
+
+    body{
+        background-color: #000000;
+      
+    }
+
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+
+        width: 150px;
+    }
+    .container2{
+     
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    main{
+        display: table-column;
+        flex-direction: row;
+    }
+    
+    .logo{
+        margin-top: -45%;
+        width: 300px;
+
+}
+}
+
+@media(max-width:600px){
+
+    body{
+        background-color: #000000;
+      
+    }
+
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 225px;
+    }
+    .container2{
+        width: 225px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    main{
+        display: table-column;
+        flex-direction: row;
+    }
+    
+    .logo{
+        margin-top: -45%;
+        width: 300px;
+
+}
+}
+
+@media(max-width:920px){
+
+    body{
+        background-color: #000000;
+      
+    }
+
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 400px;
+    }
+    .container2{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    main{
+        display: table-column;
+        flex-direction: row;
+    }
+    
+    .logo{
+        margin-top: -45%;
+        width: 400px;
+
+}
+}
