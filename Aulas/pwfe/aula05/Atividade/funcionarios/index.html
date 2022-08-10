@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionarios</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+	<body>
+		<header class="titulo">Registro de Funcionarios</header>
+        <main id="main">
+            <div id="bloco">
+                <h1 class="login">Cadastre as informações a baixo:</h1>
+                    <form>
+                        <label class="subtitulo">Nome</label>
+                        <input type="text"  id="nome" placeholder="Nome...">
+                        
+                        <label class="subtitulo">Cargo</label>
+                        <input type="text"  id="cargo" placeholder="O cargo...">
+                        
+                        <label class="subtitulo">Salário</label>
+                        <input type="text" id="salario" placeholder="O salário...">
+                        
+                        <button type="submit"  onClick="cadastro()"value="Enviar"><button>
+                    </form>
+            </div>
+        </main>
+            <table>
+                <thead >
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Salário</th>
+                </thead>
+                <tbody id = "table-body">
+                     <tr>
+                        <td>fulano</td>
+                        <td>Gerente</td>
+                        <td>3000,00</td>
+                    </tr> 
+                </tbody>
+            </table>
+        
+	</body>
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding:0;
+}
+header {
+    
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  
+    display: flex;
+    background-color: red;
+    
+}
+
+  .user > img{ 
+   
+    width: 100px;
+    border-radius: 50%;
+}
+
+.div{
+    margin-left: 10%;
+    color: aliceblue;
+    font-family:"Lucida Console", monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding:2%;
+    padding-left: 0.50%;
+    
+}
+
+.div2{
+    margin-left: 25%;
+    color: aliceblue;
+    font-family:"Lucida Console", monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding:2%;
+    padding-left: 0.50%;
+    
+}
+body{
+    padding-bottom: 5%;
+    background-color: #867979;
+}
+#btnSair{
+    font-family:"Lucida Console", monospace;
+    font-size: 1.5rem;
+    border: none;
+    color: aliceblue;
+    background-color: red;
+}
+.tabela{
+    margin-top: 100px;
+    margin-left: 500px;
+    display: flex;
+   flex-wrap: wrap;
+    width: 70%;
+   
+}
+
+
+
+.Item-lista{
+   
+    width: 15vw;
+ 
+    border: none;
+    background-color: #ffffff;
+    display: table;
+   
+    margin: 10px;
+    padding: 10px;
+    
+    font-size: 1.5rem;
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 30px;
+    
+}
+
+
+ #nome-pro,#preco-pro{
+    margin-top: 10%;
+} 
+#produto{
+    width: 300px;
+    height:200px;
+}
+#carrinho{
+
+    margin-left:75%;
+    width: 50px;
+}
+
+
+#img-item{
+    width: 8vh;
+    height: 8vh;
+}
+#nivel-fun{
+    width:40px;
+    border: none;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+
+}
+
+.modelo{
+    visibility: hidden;
+    display:none;
+}
