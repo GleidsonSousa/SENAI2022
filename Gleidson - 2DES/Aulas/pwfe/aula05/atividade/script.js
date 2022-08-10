@@ -4,74 +4,105 @@
 
 
 
-[
-	{
+
+var tabela =[
+	
+	{ 
+		
 		"funcionario":"Sancho Cedraz",
 		"cargo":{
 			"nome":"Analista",
-			"nível":2
+			"nivel":2
 		},
-		"autorizado": Positivo
+		
+		"autorizado": true 
 	},		
 	{
 		"funcionario":"Ionara Pederneiras",
 		"cargo":{
 			"nome":"Técnico",
-			"nível":2
+			"nivel":2
 		},
-		"autorizado":Negativo
+		"autorizado":true
 	},
 	{
 		"funcionario":"Filipe Castanho",
 		"cargo":{
 			"nome":"Desenvolvedor",
-			"nível":1
+			"nivel":1
 		},
-		"autorizado":Negativo
+		"autorizado":false
 	},
 	{
 		"funcionario":"Lívia Bicalho",
 		"cargo":{
 			"nome":"Analista",
-			"nível":3
+			"nivel":3
 		},
-		"autorizado":Positivo
+		"autorizado":true
 	},
 	{
 		"funcionario":"Mauro Varanda",
 		"cargo":{
 			"nome":"Desenvolvedor",
-			"nível":3
+			"nivel":3
 		},
-		"autorizado":Negativo
+		"autorizado":true
 	},	
 	{
 		"funcionario":"Sandro Rosário",
 		"cargo":{
 			"nome":"Técnico",
-			"nível":3
+			"nivel":3
 		},
-		"autorizado":Positivo
+
+		"autorizado":true
 	}
 ]
 
-var itemLista = document.querySelector(".item-lista");
+var itemLista = document.querySelector(".Item-lista");
+
 function carregar(){
        
-        carrinho.forEach(item =>{
+	tabela.forEach(funci =>{
             let novoItem =  itemLista.cloneNode(true);
 
             novoItem.classList.remove("modelo");
 
-        novoItem.querySelector("#nome-fun").innerHTML = item.funcionario;
-        novoItem.querySelector("#cargo-fun").innerHTML = item.cargo.nome;
-        novoItem.querySelector("#nivel-fun").value = item.cargo.nível;
-        novoItem.querySelector("#autorizacao-fun").innerHTML = item.autorizado;
+        novoItem.querySelector("#nome-fun").innerHTML = funci.funcionario;
+        novoItem.querySelector("#cargo-fun").innerHTML = funci.cargo.nome;
+        novoItem.querySelector("#nivel-fun").innerHTML = funci.cargo.nivel;
+        novoItem.querySelector("#autorizacao-fun").innerHTML = funci.autorizado;
 
-            document.querySelector(".tabeliha").appendChild(novoItem);       
+		if(funci.autorizado){
+			novoItem.querySelector("#autorizacao-fun").innerHTML = "Autorizado";
+		}else{
+			novoItem.querySelector("#autorizacao-fun").innerHTML = "Não Autorizado";
+		}
+
+		if(funci.cargo.nivel >= 3){
+			novoItem.querySelector("#btnDelete").disabled = true;
+		}
+
+var Analista = innerHTML = "Analista";
+var Desenvolvedor = innerHTML = "Desenvolvedor";
+
+		if(funci.cargo.nivel >= 3 && funci.cargo.nome == Analista ){
+			novoItem.querySelector("#autorizacao-adm").innerHTML = "ADMIN";
+		}
+
+		if(funci.cargo.nivel >= 3 && funci.cargo.nome == Desenvolvedor ){
+			novoItem.querySelector("#autorizacao-adm").innerHTML = "ADMIN";
+		}
+
+            document.querySelector(".tabela").appendChild(novoItem);       
         });
+
+		
 }
 
+
 function removerItem(e) {
-    e.parentNode.remove();
+
+		e.parentNode.remove();
 }
