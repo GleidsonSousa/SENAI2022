@@ -8,9 +8,9 @@ var backend = [
     },
 
     {
-		"usuarios":"alexandrin",
+		"usuarios":"ppp",
 		"passwords":{
-			"senha":"ale123",
+			"senha":"ppp123",
 		},
     },
 ]
@@ -19,13 +19,16 @@ var Usuario = document.querySelector("#username");
 var Senha = document.querySelector("#password");
 var Result = document.querySelector("#resposta");
 
-Usuario.addEventListener("keyup", validarLogin);
+function validarLogin(){
+	backend.forEach(user =>{
+			if(user.usuarios == Usuario.value && user.passwords.senha == Senha.value ){
+				console.log("oi")
+				window.location.href = "./home"
 
-// function validarLogin(){
-//     if( Usuario.value == backend.usuarios.value ){
-//         window.location.href = "./home"
+			}
 
-//     }
+
+	});
     
-// }
+}
 
