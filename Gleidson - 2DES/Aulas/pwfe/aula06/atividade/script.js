@@ -64,29 +64,41 @@ var itemLista = document.querySelector(".Item-lista");
 
 function carregar(){
        
-	tabela.forEach(item =>{
+	tabela.forEach(funci =>{
             let novoItem =  itemLista.cloneNode(true);
 
             novoItem.classList.remove("modelo");
 
-        novoItem.querySelector("#nome-fun").innerHTML = item.funcionario;
-        novoItem.querySelector("#cargo-fun").innerHTML = item.cargo.nome;
-        novoItem.querySelector("#nivel-fun").innerHTML = item.cargo.nivel;
-        novoItem.querySelector("#autorizacao-fun").innerHTML = item.autorizado;
+        novoItem.querySelector("#nome-fun").innerHTML = funci.funcionario;
+        novoItem.querySelector("#cargo-fun").innerHTML = funci.cargo.nome;
+        novoItem.querySelector("#nivel-fun").innerHTML = funci.cargo.nivel;
+        novoItem.querySelector("#autorizacao-fun").innerHTML = funci.autorizado;
 
-		if(item.autorizado){
+		if(funci.autorizado){
 			novoItem.querySelector("#autorizacao-fun").innerHTML = "Autorizado";
 		}else{
 			novoItem.querySelector("#autorizacao-fun").innerHTML = "Não Autorizado";
 		}
 
+		if(funci.cargo.nivel >= 3){
+			novoItem.querySelector("#btnDelete").disabled = true;
+		}
+
+var Analista = innerHTML = "Analista";
+var Desenvolvedor = innerHTML = "Desenvolvedor";
+
+		if(funci.cargo.nivel >= 3 && funci.cargo.nome == Analista ){
+			novoItem.querySelector("#autorizacao-adm").innerHTML = "ADMIN";
+		}
+
+		if(funci.cargo.nivel >= 3 && funci.cargo.nome == Desenvolvedor ){
+			novoItem.querySelector("#autorizacao-adm").innerHTML = "ADMIN";
+		}
+
             document.querySelector(".tabela").appendChild(novoItem);       
         });
 
-		if(item.cargo.nivel){
-
-		}
-	
+		
 }
 
 
