@@ -1,0 +1,30 @@
+ <View style={style.container}>
+    <View style={style.primeira}>
+      <Text>Olá Lindaaaa !!</Text>
+      <TextInput style={style.input}  placeholder='ESCREVA AQUI KKK' multiline={true} numberOfLines={10}/>
+      < Button/>
+      <TouchableOpacity style={style.btnExclui} >
+        <Image style={{width: '40px', height: '40px'}} source={trashIcon}/>
+        <Text>Apagar hehehe</Text>
+      </TouchableOpacity>
+      {
+        user.map(user =>{
+        return (
+          // <Text>{user.nome}</Text>
+          // <View>
+          //   <Text>{user.nome}</Text>
+          //   <Text>{user.matricula}</Text>
+          // </View>
+          <TouchableOpacity style={style.btnExclui} >
+          <Text>{`${user.nome} - ${user.matricula}`}</Text>
+          </>
+        )
+        })
+      }
+      </View>
+      <View style={style.segunda}>
+        <Text> Oi :D, tim :c, claro :o</Text>
+      <Image  style={style.imgStyle} source={imgGato} />
+      <Image  style={style.imgStyle} source= {{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjTdLufpxcGG4cD497yh6GxxTeOfw6p8HdOe-6R43ytm2Q4jjNHM8cqOZGvns_pM7A5H4&usqp=CAU'}}/>
+      </View>
+      </View>

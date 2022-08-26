@@ -12,16 +12,16 @@ app.use(express.json());
 app.get('/pedidos',(req,res)=>{
     
     
-    //let priNome = req.query.priNome;
-   // let sobrenome = req.query.sobrenome;
-   // let endereco = req.query.endereco;
+    let priNome = req.query.priNome;
+   let sobrenome = req.query.sobrenome;
+   let endereco = req.query.endereco;
 
-    let id = req.query.id;
-    let telefones = req.query.telefones;
+   let string = `insert into clientes value(null,'${priNome} ','${sobrenome}','${endereco}')`;
 
-   // let string = `insert into clientes value(null,'${priNome} ','${sobrenome}','${endereco}')`;
-    let string2 = `insert into telefones value(${id},'${telefones}')`;
-    con.query(string2,(err,result)=>{   
+    // let id = req.query.id;
+    // let telefones = req.query.telefones;
+    // let string2 = `insert into telefones value(${id},'${telefones}')`;
+    con.query(string,(err,result)=>{   
         if(err ==  null){
             res.json("Dados Recebidos com Sucesso, e enviados para o Banco de Dados");
         }else{
