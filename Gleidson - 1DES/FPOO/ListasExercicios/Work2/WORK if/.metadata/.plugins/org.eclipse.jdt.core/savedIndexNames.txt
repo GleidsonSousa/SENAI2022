@@ -1,5 +1,0 @@
-INDEX VERSION 1.130+D:\FPOO\Work2\WORK if\.metadata\.plugins\org.eclipse.jdt.core
-1584769312.index
-4115557676.index
-3745320861.index
-2024191280.index

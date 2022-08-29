@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+C:\Users\GLEIDSON  1- DES\Documents\Gleidson - 1DES\FPOO\Aulas\aula25\.metadata\.plugins\org.eclipse.jdt.core
-1530008225.index
-3032500320.index
-2740332756.index
-1865797976.index

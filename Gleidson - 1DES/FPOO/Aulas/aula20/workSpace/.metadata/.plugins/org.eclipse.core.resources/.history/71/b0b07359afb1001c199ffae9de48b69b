@@ -1,9 +1,0 @@
-package modelo;
-
-public class Cao {
-
-	private int qtMotoqueirosAtacados;
-
-	
-
-	}

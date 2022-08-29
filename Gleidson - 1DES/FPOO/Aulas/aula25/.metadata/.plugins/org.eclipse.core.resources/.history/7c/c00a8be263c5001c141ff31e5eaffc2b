@@ -1,9 +1,0 @@
-package control;
-
-import java.util.ArrayList;
-import model.Planilha;
-
-public class Processaplanilha {
-	static ArrayList<Planilha> linhas = new ArrayList<>();
-
-}

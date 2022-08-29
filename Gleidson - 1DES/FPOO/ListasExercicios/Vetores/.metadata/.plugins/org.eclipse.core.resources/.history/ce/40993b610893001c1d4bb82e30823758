@@ -1,9 +1,0 @@
-package exemploclassicos;
-
-public class LeitordeCartao {
-
-	public static void main(String[] args) {
-
-	}
-
-}

@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+D:\FPOO\desafio2\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-3014016818.index
-1329020163.index
-2539055023.index
