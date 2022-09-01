@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+table{
+    margin-top: 8.5%;
+    padding: 10%;
+    border: 2px solid gray;
+}
+
+th{
+ font-size: 1.5rem;    
+}
+
+.titulo{
+    text-align: center;
+}
+
+#telefone{
+    width: 50px;
+}
+
+.modelo{
+   
+
+}
