@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,60 @@
     <link rel="stylesheet" href="clientes.css">
     <title>Clientes</title>
 </head>
-<body>
-            <h1 class="titulo">CLIENTES</h1>
-            <table id="tabela" class="modelo">
+
+<body onload="carregarCli()">
+    <table>
+        <thead>
+            <tr>
+                <th id="titulo" colspan='8'>Clientes</th>
+            </tr>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>Telefones</th>
+            </tr>
+        </thead>
+        <tbody id="addCli"></tbody>
+    </table>
+    
+    <div id="modais">
+        <div id="modalTels" style="display:none;">
+            <table id="modal">
                 <thead>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th>Endereço</th>
-                    <th>Bairro</th>
-                    <th>Cidade</th>
-                    <th>UF</th>
-                    <th><img  id="telefone" src="telefone.jpg" alt="telefones"></th>
+                    <tr>
+                        <th>Telefones</th>
+                        <th align="right"><button class="fechar"
+                                onclick="modais.setAttribute('style','display:none;')">X</button></th>
+                    </tr>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Número</th>
+                    </tr>
                 </thead>
-                <tbody id = "tlbody">
-                     <tr>
-                        <td>1</td>
-                        <td>derente</td>
-                        <td>Pqp</td>
-                        <td>Seila</td>
-                        <td>Pira</td>
-                        <td>SdoP</td>
-                    </tr> 
-                </tbody>
+                <tbody id="telefones"></tbody>
             </table>
+        </div>
+    </div>
     
 </body>
+<script src="clientes.js"></script>
+
 </html>
+
+
+<!-- <div class="main">
+    <tbody class="addCli modelo" >
+        <tr>
+            <td id="cod">a</td>
+            <td id="nome">a</td>
+            <td id="endereco">a</td>
+            <td id="bairro">a</td>
+            <td id="cidade">a</td>
+            <td id="uf">a</td>
+        </tr>
+    </tbody>
+</div>  -->
