@@ -14,12 +14,11 @@ create table clientes(
 
 create table carros(
     id_carro integer auto_increment not null primary key,
-    id_cliente integer not null,
+    id_cli integer not null,
     placa varchar(10) not null unique,
     marca varchar(50) not null,
     tipo varchar(20) not null,
-    descrição varchar(100),
-    foreign key carros(id_cliente) references clientes(id_cliente)
+    descrição varchar(100)
 );
 
 create table vagas(
@@ -37,36 +36,41 @@ create table registraTempo(
     h_saida time,
     tipo_reg varchar(20) not null,
     valor_h float(6,2) not null,
-    foreign key registraTempo(id_vaga) references vagas(id_vaga),
-    foreign key registraTempo(id_cliente) references clientes(id_cliente),
-    foreign key registraTempo(id_carro) references carros(id_carro)
+    foreign key (id_vaga) references vagas(id_vaga),
+    foreign key (id_cliente) references clientes(id_cliente),
+    foreign key (id_carro) references carros(id_carro)
 );
 
-LOAD DATA INFILE 'C:/Users/Meu Computador/Desktop/estacionamento/back/src/docs/clientes.csv'
+alter table carros add foreign key (id_cli) references clientes(id_cliente);
+
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/estacionamento/back/src/docs/clientes.csv'
 INTO TABLE clientes
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
--- INSERT INTO carros VALUES (DEFAULT,2,'abc1212','Scania','Caminhão',null);
-LOAD DATA INFILE 'C:/Users/Meu Computador/Desktop/estacionamento/back/src/docs/carros.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/estacionamento/back/src/docs/carros.csv'
 INTO TABLE carros
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Meu Computador/Desktop/estacionamento/back/src/docs/vagas.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/estacionamento/back/src/docs/vagas.csv'
 INTO TABLE vagas
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
-IGNORE 1 ROWS; 
+IGNORE 1 ROWS;
 
--- LOAD DATA INFILE 'C:/Users/Meu Computador/Desktop/estacionamento/back/src/docs/registros.csv'
--- INTO TABLE registraTempo
--- FIELDS TERMINATED BY ';'
--- ENCLOSED BY '"'
--- LINES TERMINATED BY '\r\n'
--- IGNORE 1 ROWS; 
+select * from `clientes`;
+select * from `carros`;
+select * from `vagas`;
+
+
+
+
+
+
+
