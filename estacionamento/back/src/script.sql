@@ -38,7 +38,7 @@ create table registro_estac(
     h_entrada time not null,
     h_saida time,
     valor_final float(10,2),
-    forma_pagamento varchar(30) not null,
+    forma_pagamento varchar(30),
     status_pag varchar(10) not null,
     foreign key (id_vag) references vagas(id_vaga),
     foreign key (id_cli) references clientes(id_cliente),
@@ -60,9 +60,9 @@ insert into vagas values(default,'Veículo Pequeno',5.00);
 insert into vagas values(default,'Veículo Médio',10.00);
 insert into vagas values(default,'Veículo Grande',20.00);
 
-insert into registro_estac values(default,1,3,2,'2022-09-20','08:00',null,null,'PIX','Aberto');
-insert into registro_estac values(default,3,1,1,'2022-09-20','09:30',null,null,'Dinheiro','Aberto');
-insert into registro_estac values(default,2,2,3,'2022-09-10','10:00',null,null,'Cartão Débito','Aberto');
+insert into registro_estac values(default,1,3,2,'2022-09-20','08:00',"",null,'PIX','Aberto');
+insert into registro_estac values(default,3,1,1,'2022-09-20','09:30',"",null,'Dinheiro','Aberto');
+insert into registro_estac values(default,2,2,3,'2022-09-10','10:00',"",null,'Cartão Débito','Aberto');
 insert into registro_estac values(default,2,4,3,'2022-09-18','08:30','12:30',40.00,'Cartão Débito','Pago');
 
 select * from `clientes`;
@@ -74,7 +74,7 @@ create view vw_estacionar as
 select r.id_registro,v.id_vaga as vagas, c.id_cliente as clientes, v.categoria_vaga , v.valor_h , ca.placa as carros, r.forma_pagamento, r.status_pag from clientes c
 inner join registro_estac r on c.id_cliente = r.id_cli
 inner join vagas v on r.id_vag = v.id_vaga 
-inner join carros ca on  r.id_car = ca.id_carro where r.h_saida is null;
+inner join carros ca on  r.id_car = ca.id_carro where r.h_saida = "00:00";
 
 select * from vw_estacionar;
 

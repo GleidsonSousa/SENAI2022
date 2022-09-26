@@ -6,8 +6,8 @@ const conDB = mysql.createConnection({
     "database": "renasparking"
 });
 
-function listarCarros(req, res) {
-    let query = "SELECT * FROM carros";
+function listarVagas(req, res) {
+    let query = "SELECT * FROM vagas";
 
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -18,8 +18,8 @@ function listarCarros(req, res) {
     })
 };
 
-function listaCarro(req, res) {
-    let query = `SELECT * FROM carros WHERE placa = '${req.params.placa}'`;
+function listaVaga(req, res) {
+    let query = `SELECT * FROM vagas WHERE id_vaga = '${req.params.id_vaga}'`;
     
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -30,8 +30,8 @@ function listaCarro(req, res) {
     })
 };
 
-function cadastrarCarro(req, res) {
-    let query = `INSERT INTO carros VALUES (DEFAULT, '${req.body.id_cli}', '${req.body.placa}', '${req.body.marca}', '${req.body.categoria}')`;
+function cadastrarVaga(req, res) {
+    let query = `INSERT INTO vagas VALUES (DEFAULT, '${req.body.categoria_vaga}', '${req.body.valor_h}')`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -42,8 +42,8 @@ function cadastrarCarro(req, res) {
     });
 };
 
-function excluirCarro(req, res) {
-    let query = `DELETE FROM carros WHERE placa = '${req.body.placa}'`;
+function excluirVaga(req, res) {
+    let query = `DELETE FROM vagas WHERE id_vaga = '${req.body.id_vaga}'`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -54,8 +54,8 @@ function excluirCarro(req, res) {
     });
 };                                      
 
-function editarCarro(req, res){
-    let query = `UPDATE carros SET id_cli =  '${req.body.id_cli}', placa = '${req.body.placa}', marca = '${req.body.marca}', categoria = '${req.body.categoria}' WHERE placa = '${req.body.placa}'`;
+function editarVaga(req, res){
+    let query = `UPDATE vagas SET id_vaga =  '${req.body.id_vaga}', categoria_vaga = '${req.body.categoria_vaga}', valor_h = '${req.body.valor_h}'`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -67,9 +67,9 @@ function editarCarro(req, res){
 };
 
 module.exports = {
-    listarCarros,
-    listaCarro,
-    cadastrarCarro,
-    excluirCarro,
-    editarCarro
+    listarVagas,
+    listaVaga,
+    cadastrarVaga,
+    excluirVaga,
+    editarVaga
 }

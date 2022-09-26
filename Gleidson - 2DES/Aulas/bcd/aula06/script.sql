@@ -655,18 +655,55 @@ select * from vw_clientes where nome = "Cesar Augusto Pascali Rago";
 
 show tables;
 describe clientes;
-
 select * from clientes where nome = "Cesar Augusto Pascali Rago";
 --  id = 12
-describe pedidos;
 
+describe pedidos;
 select * from pedidos where cliente_id = 12;
 -- Ultimo pedido id = 22
- Quando foi o último pedido do cliente "Cesar Augusto Pascali Rago"? Qual o valor deste pedido?
- R: Data = 2022-09-15, horario = 13:10:00 e Valor = 354.71
- describe pedidos;
- select * from pedidos where  = 12;
 
-Quantas pizzas ele pediu e quantos sabores diferentes?
-R: Ele pediu 
+--  Quando foi o último pedido do cliente "Cesar Augusto Pascali Rago"? Qual o valor deste pedido?
+--  R: Data = 2022-09-15, horario = 13:10:00 e Valor = R$ 354.71;
 
+ describe itens_pedido;
+ select * from itens_pedido  where  pedido_id = 22;
+-- quantidade = 11;
+-- pizzas id = 5,7,8,25;
+
+describe pizzas;
+ select * from pizzas  where  pizza_id = 5;
+ select * from pizzas  where  pizza_id = 7;
+ select * from pizzas  where  pizza_id = 8;
+ select * from pizzas  where  pizza_id = 25;
+
+-- Quantas pizzas ele pediu e quantos sabores diferentes?
+-- R: Ele pediu 11 pizzas, 4 sabores sendo Atum, Bauru, Caipira, Moda do Clientes.
+
+
+-- Crie uma view da tabela Itens_pedido que mostre também o nome de cada pizza em ordem de pedido_id, coloque o nome de "vw_itens"
+create view vw_itens as  
+select i.pedido_id, i.pizza_id, pz.nome as nome_pizza, i.quantidade, i.valor,  i.quantidade * i.valor as subtotal from itens_pedido i
+inner join  pedidos p on p.pedido_id = i.pedido_id
+inner join  pizzas pz on pz.pizza_id = i.pizza_id;
+
+select * from vw_itens;
+
+-- Crie uma view que mostre por ordem de pedido os dados (pedido_id, cliente_id, data, hora, pizza_id, nome da pizza, valor da pizza, subtotal e total), nomeie como "vw_pedidos"
+describe pedidos;
+create view vw_pedidos as  
+select i.pedido_id, p.cliente_id, p.data, p.hora, i.pizza_id, pz.nome as nome_pizza, i.quantidade as valor_pizza, i.valor,  i.quantidade * i.valor as subtotal, p.valor as Total from itens_pedido i
+inner join  pedidos p on p.pedido_id = i.pedido_id
+inner join  pizzas pz on pz.pizza_id = i.pizza_id;
+
+
+select * from vw_pedidos;
+
+-- Acrescente na view anterior o nome do cliente e mostre na ordem de pedido decrescente.
+describe clientes;
+create view vw_pedidos2 as  
+select i.pedido_id, p.cliente_id, c.nome as nome_cliente, p.data, p.hora, i.pizza_id, pz.nome as nome_pizza, i.quantidade as valor_pizza, i.valor,  i.quantidade * i.valor as subtotal, p.valor as Total from itens_pedido i
+inner join  pedidos p on p.pedido_id = i.pedido_id
+inner join  pizzas pz on pz.pizza_id = i.pizza_id
+inner join  clientes c on c.cliente_id = p.cliente_id;
+
+select * from vw_pedidos2 order by  pedido_id desc;
