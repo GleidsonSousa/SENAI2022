@@ -5,11 +5,29 @@ use renasparking;
 
 create table clientes(
     id_cliente integer auto_increment not null primary key,
-    cpf varchar(11) not null unique,
     nome varchar(50) not null,
-    telefone varchar(15) not null,
+    sobrenome varchar(50) not null,
+    data_nasci varchar(10) not null,
+    cpf varchar(11) not null unique,
+    rg varchar(10) not null unique,
     email varchar(50) not null,
-    endereco varchar(100) not null 
+    cep varchar(20) not null,
+    endereco varchar(100) not null,
+    numero decimal(5,0) not null, 
+    bairro varchar(50) not null,
+    cidade varchar(50) not null,
+    UF varchar(5) not null,
+    complemento varchar(20) not null,
+    status_cli varchar(3) not null
+
+);
+
+create table telefones(
+    id_cli integer not null,
+    tipo_tel varchar(10) not null,
+	telefone varchar(16) not null,
+	foreign key (id_cli) references clientes(id_cli) on delete cascade
+
 );
 
 create table carros(
@@ -47,9 +65,23 @@ create table registro_estac(
 
 alter table carros add foreign key (id_cli) references clientes(id_cliente);
 
-insert into clientes values(default,'80821611089','Tony Halls','19988430190','TonyH@gmail.com','Rua Joaquin Cardoso 400');
-insert into clientes values(default,'44333810043','Juzyssara Monte','49937365429','JuzyMonte@hotmail.com','Rua São Bernado 600');
-insert into clientes values(default,'07937014067','Renas Wellisson','19938382238','RenasWelli@yahoo.com','Rua dos Descolados 656');
+ id_cliente integer auto_increment not null primary key,
+  
+ 
+    cep varchar(20) not null,
+    endereco varchar(100) not null,
+    numero decimal(5,0) not null, 
+    bairro varchar(50) not null,
+    cidade varchar(50) not null,
+    UF varchar(5) not null,
+    complemento varchar(20) not null,
+    status_cli varchar(3) not null
+'19988430190'
+'49937365429'
+'19938382238'
+insert into clientes values(default,'Tony','Halls','05/09/1999','80821611089','558782780','TonyH@gmail.com','Rua Joaquin Cardoso 400');
+insert into clientes values(default,'Juzyssara','Montes','16/03/1993','44333810043','268726548','JuzyMonte@hotmail.com','Rua São Bernado 600');
+insert into clientes values(default, 'Renas','Wellisson','01/02/2004','07937014067','256982324','RenasWelli@yahoo.com','Rua dos Descolados 656');
 
 insert into carros values(default,1,'MWK7015','Scania','Caminhão');
 insert into carros values(default,3,'EDL3Z90','Ferrari','Carro');
@@ -60,10 +92,10 @@ insert into vagas values(default,'Veículo Pequeno',5.00);
 insert into vagas values(default,'Veículo Médio',10.00);
 insert into vagas values(default,'Veículo Grande',20.00);
 
-insert into registro_estac values(default,1,3,2,'2022-09-20','08:00',null,null,null,'Aberto');
-insert into registro_estac values(default,3,1,1,'2022-09-20','09:30',null,null,null,'Aberto');
-insert into registro_estac values(default,2,2,3,'2022-09-10','10:00',null,null,null,'Aberto');
-insert into registro_estac values(default,2,4,3,'2022-09-18','08:30','12:30',40.00,'Cartão Débito','Pago');
+insert into registro_estac values(default,1,3,2,DATE_SUB(curdate(),INTERVAL 5 DAY),'08:00',null,null,null,'Aberto');
+insert into registro_estac values(default,3,1,1,DATE_SUB(curdate(),INTERVAL 5 DAY),'09:30',null,null,null,'Aberto');
+insert into registro_estac values(default,2,2,3,DATE_SUB(curdate(),INTERVAL 2 DAY),'10:00',null,null,null,'Aberto');
+insert into registro_estac values(default,2,4,3,DATE_SUB(curdate(),INTERVAL 6 DAY),'08:30','12:30',40.00,'Cartão Débito','Pago');
 
 select * from `clientes`;
 select * from `carros`;
