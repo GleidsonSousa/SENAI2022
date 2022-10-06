@@ -6,6 +6,7 @@ const ClienteController = require("./controllers/Clientes.Controller");
 const CarroController = require("./controllers/CarrosController");
 const EstcacionamentoController = require("./controllers/EstacionarController");
 const VagasController = require("./controllers/VagasController");
+const TelefoneController = require("./controllers/TelefonesController");
 
 
 router.get("/clientes", ClienteController.listarClientes);
@@ -32,6 +33,12 @@ router.get("/vagas/:id_vaga", VagasController.listaVaga);
 router.post("/vagas", VagasController.cadastrarVaga);
 router.delete("/vagas", VagasController.excluirVaga);
 router.put("/vagas", VagasController.editarVaga);
+
+router.get("/telefones", TelefoneController.listarTelefones);
+router.get("/telefones/:id_cli", TelefoneController.listaTelefone);
+router.post("/telefones", TelefoneController.cadastrarTelefone);
+router.delete("/telefones", TelefoneController.excluirTelefone);
+router.put("/telefones", TelefoneController.editarTelefone);
 
 
 
