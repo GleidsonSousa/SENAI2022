@@ -16,7 +16,7 @@ create table clientes(
     numero decimal(5,0) not null, 
     bairro varchar(50) not null,
     cidade varchar(50) not null,
-    UF varchar(5) not null,
+    uf varchar(5) not null,
     complemento varchar(20) not null,
     status_cli varchar(3) not null
 
@@ -24,9 +24,9 @@ create table clientes(
 
 create table telefones(
     id_cli integer not null,
-    tipo_tel varchar(10) not null,
+    tipo_tel varchar(15) not null,
 	telefone varchar(16) not null,
-	foreign key (id_cli) references clientes(id_cli) on delete cascade
+	foreign key (id_cli) references clientes(id_cliente)
 
 );
 
@@ -65,23 +65,19 @@ create table registro_estac(
 
 alter table carros add foreign key (id_cli) references clientes(id_cliente);
 
- id_cliente integer auto_increment not null primary key,
   
- 
-    cep varchar(20) not null,
-    endereco varchar(100) not null,
-    numero decimal(5,0) not null, 
-    bairro varchar(50) not null,
-    cidade varchar(50) not null,
-    UF varchar(5) not null,
-    complemento varchar(20) not null,
-    status_cli varchar(3) not null
-'19988430190'
-'49937365429'
-'19938382238'
-insert into clientes values(default,'Tony','Halls','05/09/1999','80821611089','558782780','TonyH@gmail.com','Rua Joaquin Cardoso 400');
-insert into clientes values(default,'Juzyssara','Montes','16/03/1993','44333810043','268726548','JuzyMonte@hotmail.com','Rua São Bernado 600');
-insert into clientes values(default, 'Renas','Wellisson','01/02/2004','07937014067','256982324','RenasWelli@yahoo.com','Rua dos Descolados 656');
+insert into clientes values(default,'Tony','Halls','05/09/1999','80821611089','558782780','TonyH@gmail.com','13055910','Rua Joaquin Cardoso ',400, 'Vila formosa','Jaguariúna','SP','casa','Sim');
+insert into clientes values(default,'Juzyssara','Montes','16/03/1993','44333810043','268726548','JuzyMonte@hotmail.com','15048639','Rua São Bernado' ,600 , 'Esmeraldina','Jaguariúna','SP','Apartamento bloco C','Sim');
+insert into clientes values(default, 'Renas','Wellisson','01/02/2004','07937014067','256982324','RenasWelli@yahoo.com','25854122','Rua dos Descolados ',656, 'Cambuí','Jaguariúna','SP', 'Mansão','Sim');
+
+
+
+insert into telefones values(1,'Celular','19988430190');
+insert into telefones values(1,'Fixo','3366041210');
+insert into telefones values(2,'Celular','49937365429');
+insert into telefones values(3,'Celular','19938382238');
+
+
 
 insert into carros values(default,1,'MWK7015','Scania','Caminhão');
 insert into carros values(default,3,'EDL3Z90','Ferrari','Carro');
@@ -92,9 +88,9 @@ insert into vagas values(default,'Veículo Pequeno',5.00);
 insert into vagas values(default,'Veículo Médio',10.00);
 insert into vagas values(default,'Veículo Grande',20.00);
 
-insert into registro_estac values(default,1,3,2,DATE_SUB(curdate(),INTERVAL 5 DAY),'08:00',null,null,null,'Aberto');
-insert into registro_estac values(default,3,1,1,DATE_SUB(curdate(),INTERVAL 5 DAY),'09:30',null,null,null,'Aberto');
-insert into registro_estac values(default,2,2,3,DATE_SUB(curdate(),INTERVAL 2 DAY),'10:00',null,null,null,'Aberto');
+insert into registro_estac values(default,1,3,2,DATE_SUB(curdate(),INTERVAL 5 DAY),'08:00','','','','Aberto');
+insert into registro_estac values(default,3,1,1,DATE_SUB(curdate(),INTERVAL 5 DAY),'09:30','','','','Aberto');
+insert into registro_estac values(default,2,2,3,DATE_SUB(curdate(),INTERVAL 2 DAY),'10:00','','','','Aberto');
 insert into registro_estac values(default,2,4,3,DATE_SUB(curdate(),INTERVAL 6 DAY),'08:30','12:30',40.00,'Cartão Débito','Pago');
 
 select * from `clientes`;
@@ -106,12 +102,12 @@ create view vw_estacionar as
 select r.id_registro,v.id_vaga as vagas, c.id_cliente as clientes, v.categoria_vaga , v.valor_h , ca.placa as carros, r.forma_pagamento, r.status_pag from clientes c
 inner join registro_estac r on c.id_cliente = r.id_cli
 inner join vagas v on r.id_vag = v.id_vaga 
-inner join carros ca on  r.id_car = ca.id_carro where r.h_saida is null;
+inner join carros ca on  r.id_car = ca.id_carro where r.h_saida  = "";
 
 select * from vw_estacionar;
 
 create view estacionamento_pagos as
-select *, (valor_final) as v_final from registro_estac where h_saida is not null; 
+select *, (valor_final) as v_final from registro_estac where h_saida  <> ""; 
 
 select * from estacionamento_pagos;
 

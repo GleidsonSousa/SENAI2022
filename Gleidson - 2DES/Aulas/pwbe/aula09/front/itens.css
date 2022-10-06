@@ -34,6 +34,18 @@ header button{
     cursor: pointer;
     border-radius: 5px;
 }
+
+.icone2{
+
+        width: 40px;
+        background-color: #000000;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 15px;
+
+    }
+
 .icone{
         width: 40px;
 }
@@ -56,7 +68,80 @@ header button{
   height: 30px;
 }
 
-.model{
+.modal {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 350px;
+    background-color: #FFF;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: space-evenly;
+}
+
+.model {
     display: none;
     visibility: hidden;
 }
+
+.modal-content > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+}
+
+.modal-content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.modal-content-body {
+    margin-top: 20px;
+}
+
+.confirm {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #2fd659;
+    border: none;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.cancel {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #fa2828; 
+    border: none;
+    box-shadow: 0px 0px 5px gray;
+}
+
+input {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.cadastrar:hover {
+    color:  #fff;
+    background-color: #000000;
+}
+
+

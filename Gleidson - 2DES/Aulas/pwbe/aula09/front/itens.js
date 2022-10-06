@@ -2,6 +2,14 @@ const uri='http://localhost:3000/patrimonio/itens/';
  
 var itens = [];
 
+const modalEditar = document.querySelector(".editar");
+const btCadedit = document.querySelector("#cadedit");
+
+const inputNi = document.querySelector("#inpNi");
+const inputAquisicao = document.querySelector("#inpAquisicao");
+const inputDenominacao= document.querySelector("#inpDenominacao");
+const inputValor = document.querySelector("#inpValor");
+
 function carregar(){
     const options = {method: 'GET'};
 
@@ -27,7 +35,22 @@ function preencherTela(){
       card.querySelector("#valor").innerHTML += e.valor;
       card.querySelector("#img").src = '../docs/assets/' + e.img;
       card.querySelector("#del").setAttribute('onclick', `del(${e.ni})`);
+
+
+    
+
+      card.querySelector("#edit").addEventListener("click", () => {
+        modalEditar.classList.remove("model"); 
+        btCadedit.innerHTML = "Editar";
+        btCadedit.onclick = () => { editarItem() }
+        inputNi.value = e.ni;
+        inputAquisicao.value = e.aquisicao;
+        inputDenominacao.value = e.denominacao;
+        inputValor.value = e.valor;
+    });
+
       corpo.appendChild(card);
+
     })
 }
 
@@ -45,4 +68,74 @@ const del = (ni) => {
         })
         .catch(err => console.error(err));
     }
+}
+
+
+function fecharModalEditar() {
+  modalEditar.classList.add("model");
+}
+
+
+function abrirModalCadastro() {
+  btCadedit.innerHTML = "Cadastrar";
+  btCadedit.onclick = () => { cadastrarItem(); }
+  inputNi.value = "";
+  inputAquisicao.value = "";
+  inputDenominacao.value = "";
+  inputValor.value = "";
+  modalEditar.classList.remove("model");
+}
+
+function editarItem() {
+  let item = {
+      "ni":inputNi.value,
+      "aquisicao":inputAquisicao.value,
+      "denominacao":inputDenominacao.value,
+      "valor":inputValor.value,
+  }
+
+  fetch(uri, {
+      "method":"PUT",
+      "headers": {
+          "Content-Type":"application/json"
+      },
+      "body":JSON.stringify(item)
+  })
+  .then(res => { return res.json() })
+  .then(resp => {
+      if(resp.ni !== undefined) {
+          alert("Produto Alterado com Sucesso !");
+          window.location.reload();
+      }else {
+          alert("Falha ao salvar alterações !");
+      }
+  })
+}
+
+
+
+function cadastrarItem() {
+  let item = {
+      "ni":inputNi.value,
+      "aquisicao":inputAquisicao.value,
+      "denominacao":inputDenominacao.value,
+      "valor":inputValor.value,
+  };
+
+  fetch(uri, {
+      "method":"POST",
+      "headers": {
+          "Content-Type": "application/json"
+      },
+      "body": JSON.stringify(item)
+  })
+  .then(res => {return res.json()})
+  .then(resp => {
+      if(resp.matricula !== undefined){
+          alert("Funcionário Cadastrado Com Sucesso !");
+          window.location.reload();
+      }else {
+          alert("Falha ao cadastrar funcionário");
+      }
+   })
 }
