@@ -24,8 +24,8 @@ create table clientes(
 
 create table telefones(
     id_cli integer not null,
-    tipo_tel varchar(15) not null,
-	telefone varchar(16) not null,
+    tipo_tel varchar(10) not null,
+	numero varchar(20) not null,
 	foreign key (id_cli) references clientes(id_cliente)
 
 );
@@ -72,10 +72,10 @@ insert into clientes values(default, 'Renas','Wellisson','01/02/2004','079370140
 
 
 
-insert into telefones values(1,'Celular','19988430190');
-insert into telefones values(1,'Fixo','3366041210');
-insert into telefones values(2,'Celular','49937365429');
-insert into telefones values(3,'Celular','19938382238');
+insert into telefones values(1,'Celular','(19)98843-0190');
+insert into telefones values(1,'Fixo','(33)6604-1210');
+insert into telefones values(2,'Celular','(49)93736-5429');
+insert into telefones values(3,'Celular','(19)93838-2238');
 
 
 
@@ -199,6 +199,14 @@ select * from `clientes`;
 select * from `carros`;
 select * from `vagas`;
 select * from `registro_estac`;
+
+
+create view vw_clientes as
+select c.id_cliente as cliente_id, c.nome as Nome_cliente, c.cpf, c.email , c.status_cli,t.tipo_tel, t.numero as telefone from clientes c
+inner join telefones t on c.id_cliente = t.id_cli;
+
+select * from vw_clientes;
+
 
 create view vw_estacionar as
 select r.id_registro,v.id_vaga as vagas, c.id_cliente as clientes, v.categoria_vaga , v.valor_h , ca.placa as carros, r.forma_pagamento, r.status_pag from clientes c
