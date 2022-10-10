@@ -9,7 +9,8 @@ const VagasController = require("./controllers/VagasController");
 const TelefoneController = require("./controllers/TelefonesController");
 
 
-router.get("/clientes", ClienteController.listarClientes);
+
+router.get("/vw_clientes", ClienteController.listarClientes);
 router.get("/clientes/:cpf", ClienteController.listaCliente);
 router.post("/clientes", ClienteController.cadastrarCliente);
 router.delete("/clientes", ClienteController.excluirCliente);

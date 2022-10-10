@@ -1,5 +1,7 @@
 const mysql = require('mysql');
 
+const cli = require("../clientes");
+
 const conDB = mysql.createConnection({
     "host": "localhost",
     "user": "root",
@@ -7,11 +9,11 @@ const conDB = mysql.createConnection({
 });
 
 function listarClientes(req, res) {
-    let query = "SELECT * FROM clientes";
+    let query = "SELECT * FROM vw_clientes ";
 
     conDB.query(query, (err, result) => {
         if(err == null) {
-            res.json(result).status(200).end();
+            res.json(cli.clientes(result)).status(200).end();
         }else {
             res.json(err).status(400).end();
         }
@@ -23,7 +25,7 @@ function listaCliente(req, res) {
     
     conDB.query(query, (err, result) => {
         if(err == null) {
-            res.status(200).json(result).end();
+            res.status(200).json(cli.clientes(result)).end();
         }else {
             res.status(400).json(err).end();
         }
