@@ -66,7 +66,6 @@ const del = (ni) => {
                 
                 
         })
-        .catch(err => console.error(err));
     }
 }
 

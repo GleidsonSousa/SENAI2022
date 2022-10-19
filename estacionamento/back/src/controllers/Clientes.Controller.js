@@ -13,7 +13,7 @@ function listarClientes(req, res) {
 
     conDB.query(query, (err, result) => {
         if(err == null) {
-            res.json(cli.clientes(result)).status(200).end();
+            res.json(result).status(200).end();
         }else {
             res.json(err).status(400).end();
         }
@@ -25,7 +25,7 @@ function listaCliente(req, res) {
     
     conDB.query(query, (err, result) => {
         if(err == null) {
-            res.status(200).json(cli.clientes(result)).end();
+            res.json(result).status(200).end();
         }else {
             res.status(400).json(err).end();
         }
