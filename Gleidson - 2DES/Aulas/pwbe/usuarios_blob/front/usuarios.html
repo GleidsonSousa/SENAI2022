@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central de Usuários</title>
 </head>
-<body>
+<body onload="Carregar()">
     <header>
         <ul>
             <li><h1>Usuários</h1></li>
@@ -17,12 +17,12 @@
         </ul>
     </header>
     <main id="principal">
-        <div class="users">
+        <div class="users model">
             <div class="info-users">
-                <p>Nome: Sailor</p>
-                <p>Login: SailorSoft</p>
-                <p>Nascimento: 12/05/2000</p>
-                <p>Telefone: (19) 99121-3413</p>
+                <p id="nome">Nome: Sailor</p>
+                <p id="login">Login: SailorSoft</p>
+                <p id="nascimento">Nascimento: 12/05/2000</p>
+                <p id="telefone">Telefone: (19) 99121-3413</p>
                 <p class="botoes"><button id="excluir"><img id ="remover" src="../docs/assets/remove.png"alt=""></button>
                 <button id="editar"><img id="btnEditar" src="../docs/assets/icons8-editar.gif" alt=""></button></p>
                 

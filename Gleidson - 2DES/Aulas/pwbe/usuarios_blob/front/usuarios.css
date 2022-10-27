@@ -95,5 +95,7 @@ p{
 #remover:hover, #editar:hover{
     cursor: pointer;
 }
-
+.model{
+    display: none;
+}
 

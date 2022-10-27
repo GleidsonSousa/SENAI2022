@@ -10,6 +10,8 @@ create table clientes(
     data_nasci varchar(10) not null,
     cpf varchar(11) not null unique,
     rg varchar(10) not null unique,
+    tipo_tel varchar(10) not null,
+    numero_tel varchar(20) not null,
     email varchar(50) not null,
     cep varchar(20) not null,
     endereco varchar(100) not null,
@@ -22,13 +24,6 @@ create table clientes(
 
 );
 
-create table telefones(
-    id_cli integer not null,
-    tipo_tel varchar(10) not null,
-numero varchar(20) not null,
-foreign key (id_cli) references clientes(id_cliente)
-
-);
 
 create table carros(
     id_carro integer auto_increment not null primary key,
@@ -66,16 +61,13 @@ create table registro_estac(
 alter table carros add foreign key (id_cli) references clientes(id_cliente);
 
   
-insert into clientes values(default,'Tony','Halls','05/09/1999','80821611089','558782780','TonyH@gmail.com','13055910','Rua Joaquin Cardoso ',400, 'Vila formosa','Jaguariúna','SP','casa','Sim');
-insert into clientes values(default,'Juzyssara','Montes','16/03/1993','44333810043','268726548','JuzyMonte@hotmail.com','15048639','Rua São Bernado' ,600 , 'Esmeraldina','Jaguariúna','SP','Apartamento bloco C','Sim');
-insert into clientes values(default, 'Renas','Wellisson','01/02/2004','07937014067','256982324','RenasWelli@yahoo.com','25854122','Rua dos Descolados ',656, 'Cambuí','Jaguariúna','SP', 'Mansão','Sim');
+insert into clientes values(default,'Tony','Halls','05/09/1999','80821611089','558782780','Fixo','33768990','TonyH@gmail.com','13055910','Rua Joaquin Cardoso ',400, 'Vila formosa','Jaguariúna','SP','casa','Sim');
+insert into clientes values(default,'Juzyssara','Montes','16/03/1993','44333810043','268726548','Celular','19978570192','JuzyMonte@hotmail.com','15048639','Rua São Bernado' ,600 , 'Esmeraldina','Jaguariúna','SP','Apartamento bloco C','Sim');
+insert into clientes values(default, 'Renas','Wellisson','01/02/2004','07937014067','256982324','Celular','21943559874','RenasWelli@yahoo.com','25854122','Rua dos Descolados ',656, 'Cambuí','Jaguariúna','SP', 'Mansão','Sim');
 
 
 
-insert into telefones values(1,'Celular','(19)98843-0190');
-insert into telefones values(1,'Fixo','(33)6604-1210');
-insert into telefones values(2,'Celular','(49)93736-5429');
-insert into telefones values(3,'Celular','(19)93838-2238');
+
 
 insert into carros values(default,1,'MWK7015','Scania','Caminhão');
 insert into carros values(default,3,'EDL3Z90','Ferrari','Carro');
@@ -242,9 +234,7 @@ insert into registro_estac values(default,2,2,3,DATE_SUB(curdate(),INTERVAL 2 DA
 insert into registro_estac values(default,2,4,3,DATE_SUB(curdate(),INTERVAL 6 DAY),'08:30','12:30',40.00,'Cartão Débito','Pago');
 
 create view vw_clientes as
-select c.id_cliente as cliente_id, c.nome as Nome_cliente, c.cpf, c.email , c.status_cli,t.tipo_tel, t.numero as telefone from clientes c
-inner join telefones t on c.id_cliente = t.id_cli;
-
+select id_cliente as cliente_id, nome as Nome_cliente, cpf, email , status_cli, tipo_tel, numero_tel as telefone from clientes;
 select * from vw_clientes;
 
 
@@ -263,7 +253,6 @@ select * from estacionamento_pagos;
 
 
 select * from `clientes`;
-select * from `telefones`;
 select * from `carros`;
 select * from `vagas`;
 select * from `registro_estac`;
