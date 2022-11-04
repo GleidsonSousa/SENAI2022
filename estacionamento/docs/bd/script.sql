@@ -60,13 +60,6 @@ create table registro_estac(
 
 alter table carros add foreign key (id_cli) references clientes(id_cliente);
 
-    g varchar(10) not null unique,
-    celular varchar(10),
-    numero_cel varchar(20),
-    telefone_fixo varchar(10),
-    numero_fixo varchar(20),
-    email varchar(50) not null,
-  
 insert into clientes values(default,'Tony','Halls','05/09/1999','80821611089','558782780','19988547502','33768990','TonyH@gmail.com','13055910','Rua Joaquin Cardoso ',400, 'Vila formosa','Jaguariúna','SP','casa','Sim');
 insert into clientes values(default,'Juzyssara','Montes','16/03/1993','44333810043','268726548','19978570192','32260117','JuzyMonte@hotmail.com','15048639','Rua São Bernado' ,600 , 'Esmeraldina','Jaguariúna','SP','Apartamento bloco C','Sim');
 insert into clientes values(default, 'Renas','Wellisson','01/02/2004','07937014067','256982324','21943559874',null,'RenasWelli@yahoo.com','25854122','Rua dos Descolados ',656, 'Cambuí','Jaguariúna','SP', 'Mansão','Sim');
@@ -92,7 +85,7 @@ insert into registro_estac values(default,2,2,3,DATE_SUB(curdate(),INTERVAL 2 DA
 insert into registro_estac values(default,2,4,3,DATE_SUB(curdate(),INTERVAL 4 DAY),'08:30','12:30',40.00,'Cartão Débito','Pago');
 
 create view vw_clientes as
-select id_cliente as cliente_id, nome as Nome_cliente, sobrenome as Sobrenome, cpf, email , status_cli, tipo_tel, numero_tel as telefone from clientes;
+select id_cliente as cliente_id, nome as Nome_cliente, sobrenome as Sobrenome, cpf, email , status_cli  from clientes;
 select * from vw_clientes;
 
 create view vw_telefones as
