@@ -33,8 +33,8 @@ function listaCliente(req, res) {
     })
 };
 
-function cadastrarCliente(req, res) {
-    let query = `INSERT INTO clientes VALUES (DEFAULT, '${req.body.nome}', '${req.body.sobrenome}', '${req.body.data_nasci}', '${req.body.cpf}', '${req.body.rg}','${req.body.tipo_tel}','${req.body.numero_tel}','${req.body.email}','${req.body.cep}', '${req.body.endereco}','${req.body.numero}', '${req.body.bairro}','${req.body.cidade}', '${req.body.uf}', '${req.body.complemento}','${req.body.status_cli}')`;
+function cadastrarCliente(req, res) { 
+    let query = `INSERT INTO clientes VALUES (DEFAULT, '${req.body.nome}', '${req.body.sobrenome}', '${req.body.data_nasci}', '${req.body.cpf}', '${req.body.rg}','${req.body.celular}','${req.body.telefone_fixo}','${req.body.email}','${req.body.cep}', '${req.body.endereco}','${req.body.numero}', '${req.body.bairro}','${req.body.cidade}', '${req.body.uf}', '${req.body.complemento}','${req.body.status_cli}')`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {
