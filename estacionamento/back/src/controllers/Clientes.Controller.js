@@ -57,7 +57,7 @@ function excluirCliente(req, res) {
 
 function editarCliente(req, res){
     let query = `UPDATE clientes SET nome = '${req.body.nome}', sobrenome = '${req.body.sobrenome}', data_nasci = '${req.body.data_nasci}', cpf =  '${req.body.cpf}', 
-    rg = '${req.body.rg}',email = '${req.body.email},cep = '${req.body.cep}', endereco = '${req.body.endereco}', numero = '${req.body.numero}', bairro = '${req.body.bairro}', cidade = '${req.body.cidade}', 
+    rg = '${req.body.rg}',email = '${req.body.email}',cep = '${req.body.cep}', endereco = '${req.body.endereco}', numero = '${req.body.numero}', bairro = '${req.body.bairro}', cidade = '${req.body.cidade}', 
     uf =  '${req.body.uf}', complemento = '${req.body.complemento}', status_cli = '${req.body.status_cli}' WHERE cpf = '${req.body.cpf}'`;
 
     conDB.query(query, (err, result) => {
