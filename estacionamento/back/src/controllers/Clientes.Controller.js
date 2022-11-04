@@ -19,6 +19,8 @@ function listarClientes(req, res) {
     })
 };
 
+
+
 function listaCliente(req, res) {
     let query = `SELECT * FROM vw_clientes WHERE cpf = '${req.params.cpf}'`;
     
