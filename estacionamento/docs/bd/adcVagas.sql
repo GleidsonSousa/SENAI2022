@@ -153,5 +153,40 @@ insert into vagas values(148,'Veículo Grande',20.00);
 insert into vagas values(149,'Veículo Grande',20.00);
 insert into vagas values(150,'Veículo Grande',20.00);
 
-select * from `vagas`;
+-- SCRIPR ALEATORIO
 
+-- function cadastrarTelefone(req, res) {
+--     let query = `INSERT INTO telefones VALUES ('${req.body.id_cli}', '${req.body.tipo_tel}', '${req.body.telefone}')`;
+
+--     conDB.query(query, (err, result) => {
+--         if(err == null) {
+--             res.status(201).json(req.body).end();
+--         }else {
+--             res.status(400).json(err).end();
+--         }
+--     });
+-- };
+
+-- function excluirTelefone(req, res) {
+--     let query = `DELETE FROM telefones WHERE id_cli = '${req.body.id_cli}'`;
+
+--     conDB.query(query, (err, result) => {
+--         if(err == null) {
+--             res.status(200).json(req.body).end();
+--         }else {
+--             res.status(400).json(err).end();
+--         }
+--     });
+-- };                                      
+
+-- function editarTelefone(req, res){
+--     let query = `UPDATE telefones SET id_cli = '${req.body.id_cli}',tipo_tel = '${req.body.tipo_tel}', telefone = '${req.body.telefone}' WHERE id_cli =  '${req.body.id_cli}'`;
+
+--     conDB.query(query, (err, result) => {
+--         if(err == null) {
+--             res.status(200).json(req.body).end();
+--         }else {
+--             res.status(400).json(err).end();
+--         }
+--     });
+-- };
