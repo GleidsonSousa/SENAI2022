@@ -85,7 +85,7 @@ insert into registro_estac values(default,2,2,3,DATE_SUB(curdate(),INTERVAL 2 DA
 insert into registro_estac values(default,2,4,3,DATE_SUB(curdate(),INTERVAL 4 DAY),'08:30','12:30',40.00,'Cartão Débito','Pago');
 
 create view vw_clientes as
-select id_cliente as cliente_id, nome as Nome_cliente, sobrenome as Sobrenome, cpf, email , status_cli  from clientes;
+select id_cliente as cliente_id, nome as Nome_cliente, sobrenome as Sobrenome, cpf, email , celular, telefone_fixo, status_cli  from clientes;
 select * from vw_clientes;
 
 create view vw_telefones as
