@@ -19,6 +19,29 @@ function listarClientes(req, res) {
     })
 };
 
+function pegaInformacoes(req, res) {
+    let query = "SELECT * FROM clientes";
+
+    conDB.query(query, (err, result) => {
+        if(err == null) {
+            res.json(result).status(200).end();
+        }else {
+            res.json(err).status(400).end();
+        }
+    })
+};
+
+function pegaInformacoesDeUmCli(req, res) {
+    let query = `SELECT * FROM clientes WHERE cpf = '${req.params.cpf}'`;
+
+    conDB.query(query, (err, result) => {
+        if(err == null) {
+            res.json(result).status(200).end();
+        }else {
+            res.json(err).status(400).end();
+        }
+    })
+};
 
 
 function listaCliente(req, res) {
@@ -74,6 +97,8 @@ function editarCliente(req, res){
 module.exports = {
     listarClientes,
     listaCliente,
+    pegaInformacoes,
+    pegaInformacoesDeUmCli,
     cadastrarCliente,
     excluirCliente,
     editarCliente
