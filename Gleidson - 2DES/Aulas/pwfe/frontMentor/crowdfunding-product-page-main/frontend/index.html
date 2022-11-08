@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-  
   <link rel="stylesheet" href="../frontend/style.css">
 
   <title>Frontend Mentor | Crowdfunding product page</title>
@@ -17,6 +16,7 @@
   </style>
 </head>
 <body>
+
   <header>
       <nav>
          <ul>
@@ -29,14 +29,39 @@
        </ul>
       </nav>
   </header>
+
   <main class="principal">
-      <img id="logoM" src="../images/logo-mastercraft.svg" alt="logo Mastercraft">
-      <h1 class="titleM" >Mastercraft Bamboo Monitor Riser </h1>
-      <span> A beautiful & handcrafted monitor  stand to reduce neck and eye strain.</span>
-      <div class="butons">
+    <div class="modalMaster">
+        <img id="logoM" src="../images/logo-mastercraft.svg" alt="logo Mastercraft">
+        <h1 class="titleM" >Mastercraft Bamboo Monitor Riser </h1>
+        <span> A beautiful & handcrafted monitor  stand to reduce neck and eye strain.</span>
+        <div class="butons">
           <button id="btnBack">Back this project</button>
           <button id="btnBookmark"><img id="imgBookmark" src="../images/icon-bookmark.svg" alt="bookmark"> Bookmark</button>
-      </div>
+        </div>
+    </div>
+    <div class="modalProgress">
+        <div class="itensProgress">
+            <div>
+                <h1 class="titlesPro">$89,914</h1>
+                <span>of $100,000 backed</span>
+            </div>
+            <div class="proBorder">
+              <h1 class="titlesPro">5,007</h1>
+              <span>total backers</span>
+            </div>
+            <div>
+              <h1 class="titlesPro">56</h1>
+              <span>days left</span>
+            </div>
+        </div>
+        <div class="progressBar">
+          <div class="w3-light-grey w3-round-xlarge" style="height: 15px">
+            <div class="w3-container w3-blue w3-round-large" style="width:75%" > </div>
+          </div>
+        </div>
+        
+    </div>
   </main>
   <!-- About
   Discover

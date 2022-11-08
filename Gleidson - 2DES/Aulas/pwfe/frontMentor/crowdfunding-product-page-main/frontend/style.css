@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -15,66 +14,52 @@
     font-family: 'Commissioner', sans-serif;
     align-items: center;
  }
-
  header{
     background-image: url('../images/image-hero-desktop.jpg');
-    background-size:contain;
+    background-size:cover;
     width: 100%;
     background-repeat: no-repeat;
     height: 460px;
     padding-top: 4%;
  }
-
 li{
     list-style-type: none;
 }
-
 ul{
     gap: 30px;
     display: flex;
     color: white;
 }
-
 nav{
     gap: 770px;
     display: flex;
     justify-content: space-evenly;
  }
-
+ h1{
+   font-weight: bold;
+ }
  .titleM{ 
     padding-bottom: 2%;
  }
-
  .principal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 15px;
-    margin-top: -7%;
-    box-shadow: 1px 2px 3px rgb(240, 240, 240);
-    background-color: white;
-    width: 50%;
-    height: 30vh;
+   margin-left: -10%;
+   align-items: center;
+   text-align: center;
  }
-
 span{
     font-size: 18.5px;
     color: hsl(0, 0%, 48%);
 }
-
  #logoM{
     margin-top: -3%;
-    padding-bottom: 3%;
+    padding-bottom: 4%;
  }
-
  .butons{
     display: flex;
     flex-direction: row;
     margin-top: 4%;
     gap: 360px;
  }
-
  #btnBack{
     color: white;
     font-weight: bold;
@@ -85,11 +70,9 @@ span{
     border: none;
     width: 225px;
  }
-
 #imgBookmark{
     margin-left: -3%;
 }
-
 #btnBookmark{
     color: hsl(0, 0%, 48%);
     font-weight: bold;
@@ -101,4 +84,47 @@ span{
     border-radius: 30px;
     width: 180px;
     align-items: center;
+}
+.modalMaster{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: -15%;
+    box-shadow: 1px 2px 3px rgb(240, 240, 240);
+    background-color: white;
+    width: 125%;
+    height: 30vh;
+}
+.modalProgress{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: aqua;
+   width: 125%;
+   height: 25vh;
+   border-radius: 15px;
+   margin-top: 3%;
+}
+.proBorder{
+   padding-right: 75px;
+   padding-left:35px;
+   border-left: 1px solid black;
+   border-right: 1px solid black ;
+}
+.titlesPro{
+   font-size: 40px;
+}
+.itensProgress{
+   display: flex;
+   flex-direction: row;
+   gap: 50px;
+   margin-top: 3%;
+   margin-left: -25%;
+}
+.progressBar{
+   padding-top: 5%;
+   width: 85%;
+   height: 100% ;
 }
