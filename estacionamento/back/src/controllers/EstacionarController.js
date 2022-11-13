@@ -42,8 +42,7 @@ function listaEstcacionamento(req, res) {
 };
 
 function cadastrarEstacionamento(req, res) {  
-    let query = `INSERT INTO registro_ticket VALUES (DEFAULT, '${req.body.number_vaga}', '${req.body.placa_car}', '${req.body.cpf_cli}', '${req.body.h_entrada}', 
-    '${req.body.h_entrada}', '${req.body.h_saida}', '${req.body.valor_final}', '${req.body.forma_pagamento}', '${req.body.status_pag}')`;
+    let query = `INSERT INTO registro_ticket VALUES (DEFAULT, '${req.body.number_vaga}', '${req.body.placa_car}', '${req.body.cpf_cli}','${req.body.data_est}', '${req.body.h_entrada}',  '${req.body.h_saida}', '${req.body.valor_final}', '${req.body.forma_pagamento}', '${req.body.status_pag}')`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {

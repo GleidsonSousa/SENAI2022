@@ -42,7 +42,7 @@ create table registro_ticket(
     number_vaga numeric(10) not null,
     placa_car varchar(10) not null ,
     cpf_cli varchar(11) not null ,
-    data date not null,
+    data_est date not null,
     h_entrada time not null,
     h_saida time,
     valor_final float(10,2),
@@ -82,7 +82,7 @@ select id_cliente as cliente_id, celular as cel_cliente, telefone_fixo as fixo_C
 select * from vw_telefones;
 
 create view vw_estacionar as
-select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro, r.forma_pagamento, r.status_pag from clientes c
+select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro, r.forma_pagamento, r.status_pag from clientes c
 inner join registro_ticket r on c.cpf = r.cpf_cli
 inner join vagas v on r.number_vaga = v.numero_vaga 
 inner join carros ca on  r.placa_car = ca.placa where r.status_pag  = "Aberto";
@@ -90,7 +90,10 @@ inner join carros ca on  r.placa_car = ca.placa where r.status_pag  = "Aberto";
 select * from vw_estacionar;
 
 create view ticket_pagos as
-select *, (valor_final) as v_final from registro_ticket where status_pag  <> "Aberto"; 
+select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro,r.valor_final , r.forma_pagamento, r.status_pag from clientes c
+inner join registro_ticket r on c.cpf = r.cpf_cli
+inner join vagas v on r.number_vaga = v.numero_vaga 
+inner join carros ca on  r.placa_car = ca.placa where status_pag  <> "Aberto"; 
 
 select * from ticket_pagos;
 select * from `clientes`;
