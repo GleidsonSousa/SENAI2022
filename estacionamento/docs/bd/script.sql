@@ -41,6 +41,7 @@ create table registro_ticket(
     ticket_id integer auto_increment not null primary key,
     number_vaga numeric(10) not null,
     placa_car varchar(10) not null ,
+    categoria_carro varchar(11),
     cpf_cli varchar(11) not null ,
     data_est date not null,
     h_entrada time not null,
@@ -68,10 +69,10 @@ insert into vagas values(2,'Veículo Médio',10.00);
 
 insert into vagas values(3,'Veículo Grande',20.00);
 
-insert into registro_ticket values(default,1,'CIZ8920','44333810043',DATE_SUB(curdate(),INTERVAL 1 DAY),'08:00','','','','Aberto');
-insert into registro_ticket values(default,3,'MWK7015','80821611089',DATE_SUB(curdate(),INTERVAL 1 DAY),'09:30','','','','Aberto');
-insert into registro_ticket values(default,2,'EDL3Z90','07937014067',DATE_SUB(curdate(),INTERVAL 1 DAY),'10:00','','','','Aberto');
-insert into registro_ticket values(default,2,'HXW3364','07937014067',DATE_SUB(curdate(),INTERVAL 2 DAY),'08:30','12:30',40.00,'Cartão Débito','Pago');
+insert into registro_ticket values(default,1,'CIZ8920','Grande','44333810043',DATE_SUB(curdate(),INTERVAL 1 DAY),'08:00','','','','Aberto');
+insert into registro_ticket values(default,3,'MWK7015','Pequeno','80821611089',DATE_SUB(curdate(),INTERVAL 1 DAY),'09:30','','','','Aberto');
+insert into registro_ticket values(default,2,'EDL3Z90','Médio','07937014067',DATE_SUB(curdate(),INTERVAL 1 DAY),'10:00','','','','Aberto');
+insert into registro_ticket values(default,2,'HXW3364','Grande','07937014067',DATE_SUB(curdate(),INTERVAL 2 DAY),'08:30','12:30',40.00,'Cartão Débito','Pago');
 
 create view vw_clientes as
 select id_cliente as cliente_id, nome as Nome_cliente, sobrenome as Sobrenome, cpf ,email , celular, telefone_fixo, status_cli  from clientes;
@@ -82,7 +83,7 @@ select id_cliente as cliente_id, celular as cel_cliente, telefone_fixo as fixo_C
 select * from vw_telefones;
 
 create view vw_estacionar as
-select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro, r.forma_pagamento, r.status_pag from clientes c
+select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro, r.categoria_carro,  r.forma_pagamento, r.status_pag from clientes c
 inner join registro_ticket r on c.cpf = r.cpf_cli
 inner join vagas v on r.number_vaga = v.numero_vaga 
 inner join carros ca on  r.placa_car = ca.placa where r.status_pag  = "Aberto";
@@ -90,7 +91,7 @@ inner join carros ca on  r.placa_car = ca.placa where r.status_pag  = "Aberto";
 select * from vw_estacionar;
 
 create view ticket_pagos as
-select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro,r.valor_final , r.forma_pagamento, r.status_pag from clientes c
+select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro, r.categoria_carro, r.valor_final , r.forma_pagamento, r.status_pag from clientes c
 inner join registro_ticket r on c.cpf = r.cpf_cli
 inner join vagas v on r.number_vaga = v.numero_vaga 
 inner join carros ca on  r.placa_car = ca.placa where status_pag  <> "Aberto"; 
