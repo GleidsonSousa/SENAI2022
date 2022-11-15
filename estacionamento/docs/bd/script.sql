@@ -34,7 +34,9 @@ create table carros(
 create table vagas(
     numero_vaga numeric(10) not null primary key,
     categoria_vaga varchar(30) not null,
-    valor_h float(6,2) not null
+    valor_h float(6,2) not null,
+    status_vaga varchar(10) not null
+
 );
 
 create table registro_ticket(
@@ -43,7 +45,7 @@ create table registro_ticket(
     placa_car varchar(10) not null ,
     categoria_carro varchar(11),
     cpf_cli varchar(11) not null ,
-    data_est date not null,
+    data_est varchar(20)  not null,
     h_entrada time not null,
     h_saida time,
     valor_final float(10,2),
@@ -63,11 +65,11 @@ insert into carros values(default,'EDL3Z90','07937014067','Bugatti','La Voiture 
 insert into carros values(default,'CIZ8920','44333810043','Honda','CB 500X','Moto');
 insert into carros values(default,'HXW3364','07937014067','BMW','Concept XM','Carro');
 
-insert into vagas values(1,'Veículo Pequeno',5.00);
+insert into vagas values(1,'Veículo Pequeno',5.00,'Aberta');
 
-insert into vagas values(2,'Veículo Médio',10.00);
+insert into vagas values(2,'Veículo Médio',10.00,'Aberta');
 
-insert into vagas values(3,'Veículo Grande',20.00);
+insert into vagas values(3,'Veículo Grande',20.00,'Aberta');
 
 insert into registro_ticket values(default,1,'CIZ8920','Grande','44333810043',DATE_SUB(curdate(),INTERVAL 1 DAY),'08:00','','','','Aberto');
 insert into registro_ticket values(default,3,'MWK7015','Pequeno','80821611089',DATE_SUB(curdate(),INTERVAL 1 DAY),'09:30','','','','Aberto');
