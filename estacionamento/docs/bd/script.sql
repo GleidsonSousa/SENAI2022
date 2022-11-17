@@ -85,7 +85,7 @@ select id_cliente as cliente_id, celular as cel_cliente, telefone_fixo as fixo_C
 select * from vw_telefones;
 
 create view vw_estacionar as
-select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro, r.categoria_carro,  r.forma_pagamento, r.status_pag from clientes c
+select r.ticket_id,v.numero_vaga as number_vaga, c.cpf as cpf_cliente, r.data_est, v.categoria_vaga , v.valor_h , ca.placa as  placa_carro, r.categoria_carro,  r.valor_final,r.forma_pagamento, r.status_pag from clientes c
 inner join registro_ticket r on c.cpf = r.cpf_cli
 inner join vagas v on r.number_vaga = v.numero_vaga 
 inner join carros ca on  r.placa_car = ca.placa where r.status_pag  = "Aberto";

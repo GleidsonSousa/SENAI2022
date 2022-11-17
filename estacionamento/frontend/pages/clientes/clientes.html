@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Renas Parking</title>
+
+    <!-- Css Links -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/clientes.css">
+</head>
+
+<body onload="carregar()">
+
+    <div class="container">
+        <header>
+
+            <div class="nav-head">
+
+                <div>
+                    <h1><i class='bx bxs-car-garage'></i>Renas Parking</h1>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><i class='bx bxs-bell'></i></li>
+                        <li><i class='bx bxs-user'></i></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="menu">
+                <p>Menu</p>
+
+                <ul>
+                    <li><a href="../../home.html"><i class='bx bxs-home'></i>Home</a></li>
+                    <li><a href="../estacionar/estacionar.html"><i class='bx bxs-parking'></i>Estacionar</a></li>
+                    <li><a href="clientes.html"><i class='bx bx-group'></i>Clientes</a></li>
+                    <li><a href="../mensalidades/mensalidades.html"><i class='bx bx-money'></i>Mensalidades</a></li>
+                </ul>
+
+                <p>Configurações</p>
+
+                <ul>
+                    <li><i class='bx bx-dollar'></i>Precificações</li>
+                    <li><i class='bx bxs-user-detail'></i>Usuarios</li>
+                    <li><i class='bx bx-cog'></i>Configurações</li>
+                </ul>
+            </div>
+
+            <div class="conteudo">
+                <div class="linha-1">
+                    <i class='bx bx-group'></i>
+
+                    <div class="linha-1-sub">
+                        <h5>Cliestes Cadastrados</h5>
+                        <p>Chegou a Hora de Listar Clientes</b></p>
+                    </div>
+                </div>
+
+                <div class="linha-2">
+                    <button class="button-new"><a href="cadastrarCliente/cadastrarCliente.html"><i
+                                class='bx bxs-file-plus'></i>NOVO</a></button>
+                </div>
+
+                <div class="filtro">
+                    <input placeholder="Pesquisar por Nome" class="filtro" type="text">
+                    <!-- <button>Filtrar</button> -->
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Email</th>
+                            <th>Ativo</th>
+                            <th>Telefones</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody class="contClientes">
+                        <tr class="clientes model">
+                            <td class="idCli">1</td>
+                            <td class="nomeCli">Luiz Fernando</td>
+                            <td class="cpfCli">219.567.620-51</td>
+                            <td class="emailCli">luizfernandodesouza@gmail.com</td>
+                            <td class="status">Sim</td>
+                            <td><i onclick="mostrarModal(this)" class='bx bxs-phone'></i></td>
+                            <td>
+                                <i class='bx bx-edit' onclick="editarCliente(this)"></i>
+                                <i class='bx bxs-trash-alt' onclick="excluirCliente(this)"></i>
+                            </td>
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </main>
+
+        <div class="modal model">
+            <h1>Telefones</h1>
+
+            <hr>
+
+            <p class="nomeCliente"><b class="Cliente"></b> </p>
+
+            <div class="contInputsModal">
+                <div>
+                    <p>Telefone Fixo</p>
+                    <input type="text" class="telFixo">
+                </div>
+
+                <div>
+                    <p>Telefone Móvel</p>
+                    <input type="text" class="celular">
+                </div>
+            </div>
+
+            <div class="contButton">
+                <!-- <button>Salvar</button> -->
+                <button onclick="fecharModal()">Voltar</button>
+            </div>
+        </div>
+
+        <!-- MODAL EDITAR CLIENTE  -->
+        <div class="m-editar model">
+
+            <p class="nomeCliente"><b class="cliName"></b> </p>
+
+            <hr>
+
+            <div class="m-editar-inputs">
+                
+                <div class="cont-div-inps">
+
+                    <div class="inps">
+                        <div>
+                            <p>Nome</p>
+                            <input type="text" class="nome">
+                        </div>
+
+                        <div>
+                            <p>Sobrenome</p>
+                            <input type="text" class="sobrenome">
+                        </div>
+                    </div>
+
+                    <div class="inps">
+                        <div>
+                            <p>Data de Nascimento</p>
+                            <input type="text" class="data_nasci">
+                        </div>
+
+                        <div >
+                            <p>CPF</p>
+                            <input type="text" class="cpf">
+                        </div>
+
+                        <div>
+                            <p>RG</p>
+                            <input type="text" class="rg">
+                        </div>
+
+                        <div>
+                            <p>Email</p>
+                            <input type="text" class="email">
+                        </div>
+                    </div>
+
+                    <div class="inps">
+                        <div>
+                            <p>Telefone Fixo</p>
+                            <input type="text" class="fixo">
+                        </div>
+
+                        <div>
+                            <p>Telefone Móvel</p>
+                            <input type="text" class="telMovel">
+                        </div>
+
+                        <div>
+                            <p>CEP</p>
+                            <input type="text" class="cep">
+                        </div>
+
+                        <div>
+                            <p>Endereço</p>
+                            <input type="text" class="endereco">
+                        </div>
+                       
+                    </div>
+
+                    <div class="inps">
+
+                        <div>
+                            <p>Número</p>
+                            <input type="text" class="numero">
+                        </div>
+
+                        <div class="cont-uf">
+                            <p>UF</p>
+                            <input type="text" class="uf">
+                        </div>
+
+                        <div class="">
+                            <p>Cidade</p>
+                            <input type="text" class="cidade">
+                        </div>
+
+                        <div>
+                            <p>Bairro</p>
+                            <input type="text" class="bairro">
+                        </div>
+                        <div>
+                            <p>Ativo</p>
+                            <select class="select_status" name="" id="">
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <p>Complemento</p>
+                            <input type="text" class="complemento">
+                        </div>
+
+                        <!-- <div>
+                            <p>Observação</p>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div> -->
+                    </div>
+
+                    <div class="cont-button-status">
+                        <div>
+                            <button onclick="salvarEdicao(this)">Salvar</button>
+                            <button class="btn-voltar" onclick="fecharEditarCliente()">Fechar</button>
+                        </div>
+<!-- 
+                        <div class="cont-status">
+                            <p>Status do Cliente:</p>
+                            <input type="text" name="" class="status-cliente">
+                        </div> -->
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+        </div>
+        <!-- FIM DO MODAL EDITAR CLIENTE -->
+
+    </div>
+
+</body>
+
+<script src="js/clientes.js"></script>
+
+</html>

@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-size: 18pt;
+    margin-left: 10px;
+}
+
+
+.nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(28, 29, 31);
+    color: white;
+    
+}
+
+.nav-head i {
+    padding-right: 10px;
+
+}
+
+.nav-head ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-head ul li {
+    font-size: 18pt;
+    padding: 0px 10px;
+}
+
+
+
+.menu {
+    width: 350px;
+    height: 94.3vh;
+    background-color: rgb(46, 46, 46);
+    color: white;
+    
+}
+
+.menu p {
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 12pt;
+    background-color: rgb(78, 79, 80);
+    color: rgb(155, 155, 155);
+
+
+}
+
+.menu ul {
+    padding: 20px;
+    list-style: none;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: white;
+}
+.menu ul li {
+    font-size: 13pt;
+    font-weight: 300;
+
+}
+.menu ul li i {
+    font-size: 13pt;
+    padding-right: 5px;
+    margin-bottom: 28px;
+
+}
+
+
+
+main {
+    display: flex;
+}
+
+.conteudo {
+    margin: 30px 50px;
+    width: 100%;
+
+}
+
+.linha-1 {
+    font-size: 13pt;
+    display: flex;
+    align-items: center;
+
+}
+
+.linha-1-sub {
+    margin-left: 20px;
+}
+.linha-1-sub h5 {
+    font-size: 14pt;
+    font-weight: 600;
+}
+.linha-1-sub p {
+    font-size: 12pt;
+}
+
+.linha-1 i  {
+    font-size: 20pt;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(236, 236, 236);
+    background-color: rgba(15, 8, 8, 0.842);
+}
+
+.linha-2 {
+    display: flex;
+    justify-content: end;
+    
+}
+
+.button-new {
+    margin-top: 40px;
+    margin-right: 50px;
+    font-size: 12pt;
+    border-radius: 10px;
+    border: none;
+    font-family: 100;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+}
+
+.button-new a {
+    color: white;
+    text-decoration: none;
+}
+.button-new i {
+    padding-right: 1px;
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+    /* display: flex; */
+    justify-content: center;
+    border-collapse: collapse;
+    align-items: center;
+}
+
+table tr{
+    display: flex;
+    
+}
+
+tbody {
+    
+
+}
+tbody tr {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.253);    
+
+}
+tbody tr td {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+
+}
+
+table tr th {
+    /* width: 100%; */
+    /* margin-left: 8vw; */
+    
+    /* margin: 0 auto; */
+    font-weight: 500;
+    font-size: 85%;
+    color: rgba(34, 34, 34, 0.355);
+}
+
+table tr th:nth-child(1){width: 6%;}
+table tr th:nth-child(2){width: 20%;}
+table tr th:nth-child(3){width: 15%;}
+table tr th:nth-child(4){width: 25%;}
+table tr th:nth-child(5){width: 20%;}
+table tr th:nth-child(6){width: 7%;}
+table tr th:nth-child(7){width: 9%;}
+
+table tr td:nth-child(1){width: 5%;}
+table tr td:nth-child(2){width: 15%;}
+table tr td:nth-child(3){width: 15%;}
+table tr td:nth-child(4){width: 20%;}
+table tr td:nth-child(5){width: 17%;}
+table tr td:nth-child(6){width: 2.4%;}
+table tr td:nth-child(7){width: 8%;}
+
+
+tbody td:nth-child(1) {
+    width: 38%;
+}
+tbody td:nth-child(2) {
+    width: 100%;
+}
+tbody td:nth-child(3) {
+    width: 100%;
+}
+
+tbody td:nth-child(4) {
+    width: 500px;
+    /* background-color: brown; */
+    margin-left: 0px;
+}
+
+tbody td:nth-child(5) {
+    margin-left: 10px;
+}
+
+table tr td{
+    margin-top: 2px;
+    text-align: center;
+    /* width: 100%; */
+    margin: 0 auto;
+    font-size: 89%;
+    /* width: 13vw; */
+
+}
+
+table tr td:nth-child(7) {
+   
+    
+
+}
+
+thead tr {
+    background-color: rgb(241, 241, 241);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.288);
+    padding: 10px;
+}
+
+.filtro {
+    margin-top: 40px;
+    margin-right: 55px;
+    display: flex;
+    justify-content: end;
+}
+
+.filtro button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+}
+
+.filtro input {	
+    padding: 5px 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+
+table tr td i {
+    margin-top: 2px;
+    font-size: 12pt;
+    padding: 4px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+table tr td i:nth-child(1) {
+    background-color: rgb(0, 0, 0);
+
+}
+table tr td i:nth-child(2) {
+    background-color: red;
+
+}
+
+.modal {
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    width: 27%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.modal div {
+    padding: 10px
+}
+.modal h1 {
+    padding: 10px;
+}
+
+.modal hr {
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+.nomeCliente {
+    text-align: center;
+    font-size: 17pt;
+    margin-top: 10px;
+}
+
+.contInputsModal {
+    display: flex;
+    justify-content: center;
+}
+
+.contInputsModal p {
+    text-align: center;
+}
+
+.contInputsModal input {
+    height: 28px;
+}
+
+.contButton {    
+    display: flex;
+    justify-content: end;
+    
+}
+
+
+
+.contButton  button {
+    cursor: pointer;
+    padding: 5px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contButton  button:nth-child(1) {
+    background-color: black;
+    color: white;
+}
+
+.contButton  button:nth-child(2) {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.336);
+    color: rgb(0, 0, 0);
+}
+
+
+/*  -------  MODAL EDITAR ---------  */
+.m-editar {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgb(53, 53, 53);
+    background-color: white;
+}
+
+.m-editar .nomeCliente {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    text-align: center;
+}
+.m-editar hr {
+    width: 90%;
+    margin: 0.3% auto;
+}
+
+.inps {
+    display: flex;
+    margin: 10px;
+}
+
+.inps div {
+    margin-top: 10px;
+    
+}
+.inps p{
+    font-size: 11pt;
+}
+.inps input {
+    height: 27px;
+}
+
+.inps div:nth-child(1){margin-left: 30px;}
+.inps div:nth-child(2){margin-left: 30px;}
+.inps div:nth-child(3){margin-left: 30px;}
+.inps div:nth-child(4){margin-left: 30px;}
+.inps div:nth-child(5){margin-left: 30px;}
+.inps div:nth-child(6){margin-left: 30px;}
+
+.nome {width: 25vw;}
+.sobrenome {width: 35.5vw;}
+.dataNasc{width: 11vw;}
+.cpf{width: 12.5vw;}
+.rg{width: 12vw;}
+.email{width: 22vw;}
+.telFixo{width: 11vw;}
+.telMovel{width: 12.5vw;}
+.cep{width: 12vw;}
+.endereco{width: 22vw;}
+.numero{width: 7vw;}
+.vencimento {width: 12.5vw;}
+.complemento {width: 100%;}
+select{ width: 11vw;}
+textarea {
+    height: 45px;
+    width: 45vw;
+}
+
+.m-editar button {
+    padding: 5px 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.m-editar button:nth-child(1) {
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.m-editar button:nth-child(2) {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.336);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.cont-button-status {
+    display: flex;
+    justify-content: space-between;
+}
+.cont-status {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+    /* background-color: aqua; */
+}
+.cont-status input {
+    height: 45%;
+    width: 40%;
+    margin-left: 10px;
+}
+/* ------ FIM DO MODAL EDITAR ------- */
