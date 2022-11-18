@@ -31,8 +31,9 @@ router.post("/registro_ticket", EstcacionamentoController.cadastrarEstacionament
 router.delete("/registro_ticket", EstcacionamentoController.excluirEstacionamento);
 router.put("/registro_ticket", EstcacionamentoController.editarEstacionamento);
 
-router.get("/mensalidades" ,  MensalidadesController.listarEstacionamentosPagos);
-router.post("/mensalidades",  MensalidadesController.registraMensalidade);
+router.get("/mensalidades", MensalidadesController.listarEstacionamentosPagos);
+router.post("/mensalidades", MensalidadesController.registraMensalidade);
+router.delete("/mensalidades", MensalidadesController.excluirMensalidade);
 
 router.get("/vagas", VagasController.listarVagas);
 router.get("/vagas/:numero_vaga", VagasController.listaVaga);
@@ -42,8 +43,5 @@ router.put("/vagas", VagasController.editarVaga);
 
 router.get("/telefones", TelefoneController.listarTelefones);
 router.get("/telefones/:cliente_id", TelefoneController.listaTelefone);
-
-
-
 
 module.exports = router;
