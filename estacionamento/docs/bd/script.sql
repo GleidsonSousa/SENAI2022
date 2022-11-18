@@ -61,6 +61,8 @@ create table mensalidades(
     placa_car varchar(10) not null,
     categoria_car varchar(10) not null,
     data_ent varchar(20)  not null,
+    hora_ent time not null,
+    hora_sai time,
     valor_tot float(10,2) not null,
     forma_pagamento varchar(30)not null,
     stats_mensal varchar(30) not null
@@ -88,7 +90,7 @@ insert into vagas values(3,'Veículo Grande',20.00,'Aberta');
 insert into registro_ticket values(default,1,'CIZ8920','Grande','44333810043',DATE_SUB(curdate(),INTERVAL 1 DAY),'08:00','','','','Aberto');
 insert into registro_ticket values(default,3,'MWK7015','Pequeno','80821611089',DATE_SUB(curdate(),INTERVAL 1 DAY),'09:30','','','','Aberto');
 insert into registro_ticket values(default,2,'EDL3Z90','Médio','07937014067',DATE_SUB(curdate(),INTERVAL 1 DAY),'10:00','','','','Aberto');
-insert into mensalidades values(default, "Luiz Ferdinando","88356488349","EMZ90Z2","Médio" ,curdate(),"10","PIX", "Pago");
+insert into mensalidades values(default, "Luiz Ferdinando","88356488349","EMZ90Z2","Médio" ,curdate(),"08:00","10:00","10","PIX", "Pago");
 
 create view vw_clientes as
 select id_cliente as cliente_id, nome as Nome_cliente, sobrenome as Sobrenome, cpf ,email , celular, telefone_fixo, status_cli  from clientes;

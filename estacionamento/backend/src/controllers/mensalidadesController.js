@@ -31,7 +31,7 @@ function excluirMensalidade(req, res) {
 };
 
 function registraMensalidade(req, res) {  
-    let query = `INSERT INTO mensalidades VALUES(default, '${req.body.mensalista}', '${req.body.cpf_mensalista}','${req.body.placa_car}', '${req.body.categoria_car}','${req.body.data_ent}', '${req.body.valor_tot}', '${req.body.forma_pagamento}', '${req.body.stats_mensal}')`;
+    let query = `INSERT INTO mensalidades VALUES(default, '${req.body.mensalista}', '${req.body.cpf_mensalista}','${req.body.placa_car}', '${req.body.categoria_car}','${req.body.data_ent}','${req.body.hora_ent}','${req.body.hora_sai}', '${req.body.valor_tot}', '${req.body.forma_pagamento}', '${req.body.stats_mensal}')`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {
