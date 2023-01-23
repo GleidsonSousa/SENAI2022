@@ -28,7 +28,7 @@ insert into vagas values(25,'Veículo Pequeno',5.00);
 insert into vagas values(26,'Veículo Pequeno',5.00);
 insert into vagas values(27,'Veículo Pequeno',5.00);
 insert into vagas values(28,'Veículo Pequeno',5.00);
-insert into vagas values(29,'Veículo Pequeno',5.00);
+insert into vagas values(39,'Veículo Pequeno',5.00);
 insert into vagas values(30,'Veículo Pequeno',5.00);
 insert into vagas values(31,'Veículo Pequeno',5.00);
 insert into vagas values(32,'Veículo Pequeno',5.00);
@@ -102,6 +102,7 @@ insert into vagas values(98,'Veículo Médio',10.00);
 insert into vagas values(99,'Veículo Médio',10.00);
 insert into vagas values(100,'Veículo Médio',10.00);
 
+
 insert into vagas values(101,'Veículo Grande',20.00);
 insert into vagas values(102,'Veículo Grande',20.00);
 insert into vagas values(103,'Veículo Grande',20.00);
@@ -152,6 +153,7 @@ insert into vagas values(147,'Veículo Grande',20.00);
 insert into vagas values(148,'Veículo Grande',20.00);
 insert into vagas values(149,'Veículo Grande',20.00);
 insert into vagas values(150,'Veículo Grande',20.00);
+
 
 -- SCRIPR ALEATORIO
 
