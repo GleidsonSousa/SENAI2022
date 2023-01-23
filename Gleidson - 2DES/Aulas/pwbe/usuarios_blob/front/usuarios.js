@@ -1,7 +1,7 @@
 const uri = 'http://localhost:4500/users';
 
 
-function carregar(){
+function Carregar(){
     const options = {method: 'GET'};
 
 fetch(uri, options)
